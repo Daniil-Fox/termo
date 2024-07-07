@@ -1,0 +1,27 @@
+.cta-form {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  &__label {
+    display: block;
+    width: 24rem;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 9rem;
+    border: none;
+    background: none;
+    background-color: #fff;
+    border-radius: 0.5rem;
+
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 130%;
+    color: #606778;
+
+    padding: 2rem;
+  }
+}

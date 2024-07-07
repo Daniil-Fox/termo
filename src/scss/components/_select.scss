@@ -1,0 +1,93 @@
+.select {
+  position: relative;
+  z-index: 5;
+
+  width: 24rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 2.8rem 2rem;
+
+    cursor: pointer;
+    & > svg {
+      width: 2rem;
+      height: 1rem;
+      transition: transform 0.3s ease-out;
+      transform: rotate(180deg);
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  &__body {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+    top: calc(100% + 0.3rem);
+    border-radius: 0.5rem;
+    background-color: #fff;
+
+    box-sizing: content-box;
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: max-height 0.3s ease-out;
+  }
+
+  &__wrapper {
+    padding: 2rem;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    .select__name {
+      color: #606778;
+    }
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.3rem;
+    height: 3.3rem;
+    padding: 0.7rem;
+    border-radius: 100%;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &--whatsapp {
+      background-color: #64d05d;
+    }
+    &--tg {
+      background-color: #039be5;
+    }
+    &--email {
+      background-color: #f47b0a;
+    }
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #2d3241;
+  }
+}

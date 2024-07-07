@@ -1,0 +1,68 @@
+.cta {
+  &__container {
+    padding-top: 10rem;
+    padding-bottom: 13rem;
+    width: 100%;
+    max-width: 157.5rem;
+    margin: 0 auto;
+    border-radius: 5rem;
+    background: linear-gradient(24deg, #ecf3fb 0%, #c2d4e9 100%);
+    position: relative;
+
+    .container {
+      position: relative;
+      z-index: 5;
+    }
+  }
+  &__plug {
+    margin-top: -10rem;
+  }
+  &__image {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    width: 94rem;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom right;
+    }
+  }
+  &__suptitle {
+    margin-bottom: 1rem;
+  }
+  &__title {
+    text-align: left;
+    margin-bottom: 3rem;
+    span {
+      background: none;
+      color: #ce3c46;
+    }
+  }
+
+  &__list {
+    margin-bottom: 5rem;
+  }
+
+  &__form {
+    margin-bottom: 4rem;
+  }
+
+  &__agree {
+    display: block;
+    max-width: 49.5rem;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    color: #606778;
+    a {
+      display: block;
+      color: #3179df;
+    }
+  }
+}

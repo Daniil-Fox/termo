@@ -1,0 +1,14 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+  &__link {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #2d3241;
+  }
+}

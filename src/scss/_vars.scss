@@ -1,0 +1,16 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Manrope", sans-serif;
+  --second-family: "Gilroy", sans-serif;
+  --third-family: "Inter", sans-serif;
+  --font3: "Montserrat", sans-serif;
+  --content-width: 117rem;
+  --container-offset: 2rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --red-color: #CE3C46;
+}
