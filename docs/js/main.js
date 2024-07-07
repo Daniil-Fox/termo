@@ -10,6 +10,8 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_select_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/select.js */ "./src/js/components/select.js");
+/* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
+
 
 
 /***/ }),
@@ -42,6 +44,27 @@ select.forEach(s => {
     });
   });
 });
+
+/***/ }),
+
+/***/ "./src/js/components/tabs.js":
+/*!***********************************!*\
+  !*** ./src/js/components/tabs.js ***!
+  \***********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// const tabs = document.querySelectorAll('.types__tab')
+
+// tabs.forEach(el => {
+//   el.addEventListener('mouseenter', e => {
+//     const activeTab = document.querySelector('.types__tab.active')
+//     const activeTabWidth = activeTab.clientWidth
+
+//     const tabLine = document.createElement('div')
+//     tabLine.classList.add('tabs__line')
+//   })
+// })
 
 /***/ })
 
