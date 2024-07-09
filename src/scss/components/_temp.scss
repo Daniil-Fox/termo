@@ -1,0 +1,159 @@
+.temp {
+  padding-top: 12rem;
+  padding-bottom: 6rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5.8rem;
+
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  &__content {
+    padding: 6rem 0;
+  }
+
+  &__image {
+    padding: 6.4rem 5rem;
+    border-radius: 5rem;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000 100%), url("./../img/production/03-2x.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__capture {
+    display: block;
+    margin-bottom: 1.8rem;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 130%;
+    color: #fff;
+
+    .blue {
+      color: #468cdd;
+    }
+
+    .yel {
+      color: #fbcd5d;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 5.2rem;
+  }
+
+  &__desc {
+    font-weight: 300;
+    font-family: var(--font-family);
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.temp-item {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  &__icon {
+    width: 7.5rem;
+    height: 7.5rem;
+    flex-shrink: 0;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 130%;
+    color: #2d3241;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.temp-product {
+  padding: 2rem;
+  border-radius: 5rem;
+  overflow: hidden;
+  background-color: #ecf3fb;
+
+  &__image {
+    height: 17rem;
+    border-radius: 3rem;
+    margin-bottom: 3.5rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    padding: 1rem;
+    padding-top: 0;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 135%;
+    color: #2d3241;
+  }
+
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 3rem;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 140%;
+    color: #000;
+  }
+
+  &__link {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: #3179df;
+
+
+    span {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.clients {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  padding: 2.2rem 4.6rem;
+  border: .3rem solid #e3eaf1;
+  border-radius: 5rem;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  &__title {
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 135%;
+    color: #2d3241;
+  }
+
+  &__item {
+    height: 6.7rem;
+
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+}

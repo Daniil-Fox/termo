@@ -1,11 +1,29 @@
 .types {
   padding-top: 22.4rem;
+  padding-bottom: 12rem;
+  position: relative;
+  z-index: 2;
+
+  &__shadow {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6.6rem;
+    transform: translateY(50%);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   &__title {
     margin: 0 auto;
     max-width: 95%;
     margin-bottom: 6rem;
   }
+
   &__tabs {
     display: flex;
     align-items: center;
@@ -35,6 +53,7 @@
 
     &.active {
       color: #ce3c46;
+
       &::before {
         width: 100%;
         opacity: 1;
@@ -67,5 +86,128 @@
     width: 10%;
 
     transition: 0.3s ease-out;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  &__left {
+    grid-column: 2 span;
+    padding-top: 1.2rem;
+  }
+
+  &__right {
+    grid-column: 5 span;
+    margin-left: 3rem;
+  }
+
+  &__body {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    ol,
+    ul {
+      padding-left: 2rem;
+    }
+  }
+
+  &__desc {
+    margin: 1.2rem 0;
+  }
+
+  &__image {
+    height: 19rem;
+    margin-bottom: 4.2rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+.types-body {
+  position: relative;
+  padding: 5.2rem 4.6rem;
+  padding-top: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 1.5rem);
+    border: .3rem solid #e3eaf1;
+
+    border-radius: 5rem;
+  }
+
+  &__title {
+
+    font-size: 2rem;
+    max-width: 37rem;
+  }
+
+  &__theme {
+    display: inline-block;
+    position: absolute;
+    left: 4rem;
+    top: 0;
+    padding: .3rem 1.5rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #2d3241;
+
+    background-image: linear-gradient(to bottom, #FFE18F 0%, #FBCD5D 49%, #F6C24C 100%);
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 3.5rem;
+  }
+
+  &__video {
+    width: 27.5rem;
+    height: 16rem;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 2rem;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    span {
+      color: #3179df;
+    }
   }
 }

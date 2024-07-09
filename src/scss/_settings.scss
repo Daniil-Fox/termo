@@ -3,9 +3,11 @@
 *::after {
   box-sizing: border-box;
 }
+
 html {
   font-size: calc(100vw / 192);
 }
+
 .page {
   height: 100%;
   font-family: var(--font-family, sans-serif);
@@ -35,7 +37,8 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -120,12 +123,14 @@ a {
   padding: 3.4rem 5rem;
 
   transition: background-position 0.3s ease-out;
+
   &--red {
     box-shadow: 0 4px 0 0 #730b0f;
     background: linear-gradient(-167deg, #e52d27 0%, #b31217 50%, #e52d27 100%);
     background-size: 100% 200%;
     background-position: top;
   }
+
   &--blue {
     box-shadow: 0 4px 0 0 #254f8c;
     background: linear-gradient(-186deg, #4b92fa 0%, #2c6dca 50%, #4b92fa 100%);
@@ -136,6 +141,7 @@ a {
   @include hover {
     background-position: bottom;
   }
+
   span {
     position: absolute;
     left: 2rem;
@@ -152,12 +158,10 @@ a {
 
     padding: 0.4rem 1.4rem;
     border-radius: 0.5rem;
-    background: linear-gradient(
-      to bottom,
-      #ffe18f 0%,
-      #fbcd5d 49%,
-      #f6c24c 100%
-    );
+    background: linear-gradient(to bottom,
+        #ffe18f 0%,
+        #fbcd5d 49%,
+        #f6c24c 100%);
   }
 }
 
@@ -174,6 +178,7 @@ a {
     background-color: #dcebff;
   }
 }
+
 .title3 {
   margin: 0;
   font-family: var(--second-family);
@@ -206,7 +211,21 @@ a {
   }
 }
 
+.title5 {
+  display: block;
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 130%;
+  color: #2d3241;
+
+  &--wh {
+    color: #fff;
+  }
+}
+
 .text {
+  display: block;
   margin: 0;
   font-family: var(--second-family);
   font-weight: 400;
@@ -221,9 +240,11 @@ a {
   &--gray {
     color: #606778;
   }
+
   &--small {
     font-size: 1.6rem;
   }
+
   &--bold {
     font-weight: 700;
   }
@@ -233,7 +254,8 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
-  & > li {
+
+  &>li {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
@@ -247,6 +269,7 @@ a {
     &:not(:last-child) {
       margin-bottom: 1rem;
     }
+
     &::before {
       content: "";
       flex-shrink: 0;
@@ -267,6 +290,7 @@ a {
   padding: 1.1rem 2.6rem;
   background-color: #fff;
   border-radius: 0.5rem;
+
   span {
     font-family: var(--second-family);
     font-weight: 700;
@@ -276,6 +300,7 @@ a {
     text-transform: uppercase;
     color: #3179df;
   }
+
   img {
     flex-shrink: 0;
     width: 5rem;
@@ -291,7 +316,8 @@ a {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  & > li {
+
+  &>li {
     display: flex;
     align-items: center;
     gap: 0.8rem;
@@ -301,6 +327,7 @@ a {
     font-size: 2rem;
     line-height: 156%;
     color: #2d3241;
+
     &::before {
       content: "✓";
       color: #3179df;
