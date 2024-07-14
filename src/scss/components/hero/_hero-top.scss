@@ -76,6 +76,21 @@
         margin-bottom: 0.8rem;
       }
     }
+
+    &--status {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background-color: #1dd100;
+      }
+    }
   }
   &__value {
     display: block;

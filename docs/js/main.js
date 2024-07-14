@@ -4623,6 +4623,26 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_components.js */ "./src/js/_components.js");
 
+const menu = document.querySelector(".menu");
+const menuBurger = document.querySelector(".header__hburger");
+const menuBody = menu.querySelector(".menu__body");
+menuBurger.addEventListener("click", e => {
+  e.preventDefault();
+  let isActive = menuBurger.classList.toggle("active");
+  if (isActive) {
+    menu.style.zIndex = 100;
+    menu.style.opacity = 1;
+    setTimeout(() => {
+      menuBody.classList.add("active");
+    }, 300);
+  } else {
+    menuBody.classList.remove("active");
+    setTimeout(() => {
+      menu.style.opacity = 0;
+      menu.style.zIndex = -10;
+    }, 300);
+  }
+});
 /******/ })()
 ;
 //# sourceMappingURL=main.js.map

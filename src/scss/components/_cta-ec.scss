@@ -22,6 +22,7 @@
     }
     @include small-tablet {
       border-radius: 3rem;
+      background-size: 45rem auto, cover;
     }
     @include mobile {
       padding-top: 50px;
