@@ -6,6 +6,17 @@
 
 html {
   font-size: calc(100vw / 192);
+
+  @include tablet {
+    font-size: calc(100vw / 102.4);
+  }
+
+  @include small-tablet {
+    font-size: calc(100vw / 76.8);
+  }
+  @include mobile {
+    font-size: calc(100vw / 32);
+  }
 }
 
 .page {
@@ -123,7 +134,13 @@ a {
   padding: 3.4rem 5rem;
 
   transition: background-position 0.3s ease-out;
-
+  @include tablet {
+    padding: 2rem 5rem;
+    font-size: 16px;
+  }
+  @include mobile {
+    padding: 28px 50px 17px;
+  }
   &--red {
     box-shadow: 0 4px 0 0 #730b0f;
     background: linear-gradient(-167deg, #e52d27 0%, #b31217 50%, #e52d27 100%);
@@ -158,6 +175,16 @@ a {
 
     padding: 0.4rem 1.4rem;
     border-radius: 0.5rem;
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
+    @include small-tablet {
+      left: 1.3rem;
+      right: 1.3rem;
+      padding: 0.1rem 1.7rem;
+      font-size: 14px;
+    }
     background: linear-gradient(
       to bottom,
       #ffe18f 0%,
@@ -176,6 +203,15 @@ a {
   text-align: center;
   color: #2d3241;
 
+  @include tablet {
+    font-size: 3rem;
+  }
+  @include small-tablet {
+    font-size: 24px;
+  }
+  @include mobile {
+    font-size: 20px;
+  }
   span {
     background-color: #dcebff;
   }
@@ -188,6 +224,13 @@ a {
   font-size: 2.4rem;
   line-height: 130%;
   color: rgba(0, 0, 0, 0.8);
+
+  @include tablet {
+    font-size: 2rem;
+  }
+  @include small-tablet {
+    font-size: 20px;
+  }
 }
 
 .suptitle {
@@ -196,6 +239,13 @@ a {
   font-size: 2.4rem;
   line-height: 140%;
   color: #606778;
+
+  @include tablet {
+    font-size: 2rem;
+  }
+  @include small-tablet {
+    font-size: 16px;
+  }
 }
 
 .desc {
@@ -207,6 +257,12 @@ a {
   text-align: center;
   color: #2d3241;
 
+  @include tablet {
+    font-size: 2.2rem;
+  }
+  @include small-tablet {
+    font-size: 16px;
+  }
   span {
     font-weight: 700;
     color: #3179df;
@@ -219,10 +275,14 @@ a {
   line-height: 130%;
   color: #fff;
 
+  @include tablet {
+    font-size: 1.8rem;
+  }
   span {
     font-weight: 700;
   }
 }
+
 .title5 {
   display: block;
   margin: 0;
@@ -231,6 +291,12 @@ a {
   line-height: 130%;
   color: #2d3241;
 
+  @include tablet {
+    font-size: 1.9rem;
+  }
+  @include mobile {
+    font-size: 20px;
+  }
   &--wh {
     color: #fff;
   }
@@ -244,7 +310,12 @@ a {
   font-size: 1.8rem;
   line-height: 130%;
   color: #2d3241;
-
+  @include tablet {
+    font-size: 1.6rem;
+  }
+  @include small-tablet {
+    font-size: 14px;
+  }
   span {
     font-weight: 700;
   }
@@ -255,6 +326,9 @@ a {
 
   &--small {
     font-size: 1.6rem;
+    @include tablet {
+      font-size: 14px;
+    }
   }
 
   &--bold {
@@ -277,7 +351,12 @@ a {
     font-size: 1.8rem;
     line-height: 130%;
     color: #2d3241;
-
+    @include tablet {
+      font-size: 1.6rem;
+    }
+    @include small-tablet {
+      font-size: 16px;
+    }
     &:not(:last-child) {
       margin-bottom: 1rem;
     }
@@ -298,11 +377,19 @@ a {
 .watch-link {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1.2rem;
   padding: 1.1rem 2.6rem;
   background-color: #fff;
   border-radius: 0.5rem;
 
+  @include tablet {
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+  @include mobile {
+    padding: 10px 20px;
+  }
   span {
     font-family: var(--second-family);
     font-weight: 700;
@@ -311,6 +398,12 @@ a {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #3179df;
+    @include tablet {
+      font-size: 1.4rem;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   img {
@@ -318,6 +411,15 @@ a {
     width: 5rem;
     height: 3.5rem;
     object-fit: contain;
+
+    @include tablet {
+      width: 4rem;
+      height: 3rem;
+    }
+    @include mobile {
+      width: 43px;
+      height: 30px;
+    }
   }
 }
 
@@ -328,7 +430,7 @@ a {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-
+  flex-wrap: wrap;
   & > li {
     display: flex;
     align-items: center;
@@ -343,6 +445,10 @@ a {
     &::before {
       content: "✓";
       color: #3179df;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
     }
   }
 }

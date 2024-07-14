@@ -5,11 +5,19 @@
     display: flex;
     align-items: center;
     gap: 3.2rem;
+
+    @include tablet {
+      justify-content: center;
+    }
+
+    @include small-tablet {
+      justify-content: space-between;
+    }
   }
   &__cat {
     display: flex;
     align-items: center;
-    gap: .8rem;
+    gap: 0.8rem;
 
     font-family: var(--second-family);
     font-weight: 500;
@@ -23,6 +31,89 @@
   &__burger {
     width: 1.8rem;
     height: 1.2rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__hburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    .line {
+      width: 100%;
+      height: 0.25rem;
+      background-color: #ce3c46;
+      border-radius: 0.3rem;
+      transition: 0.3s ease-out;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0.25rem;
+        background-color: #ce3c46;
+        border-radius: 0.3rem;
+        transition: 0.3s ease-out;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+    }
+
+    &.active {
+      .line {
+        transform: rotate(45deg);
+        &::after {
+          transform: rotate(-90deg);
+        }
+        &::before {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.header-desk {
+  @include small-tablet {
+    display: none;
+  }
+}
+.header-mob {
+  display: none;
+  @include small-tablet {
+    display: block;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  &__soc {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
 
     svg {
       width: 100%;

@@ -2,6 +2,9 @@
   position: relative;
 
   z-index: 3;
+  @include small-tablet {
+    padding: 0 var(--container-offset);
+  }
   &__container {
     display: flex;
     justify-content: space-between;
@@ -10,10 +13,23 @@
     box-shadow: 0 4px 20px 0 rgba(199, 219, 239, 0.5);
     border-radius: 1rem;
     position: relative;
+    @include tablet {
+      padding: 1.5rem 2rem;
+    }
 
+    @include small-tablet {
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    @include mobile {
+      flex-direction: column;
+    }
     &::before {
       content: "";
       position: absolute;
+      left: 50%;
+      bottom: -17px;
+      transform: translateX(-50%);
       z-index: -1;
       width: 95%;
       height: 100%;
@@ -25,7 +41,11 @@
 
   &__pl {
     position: relative;
-
+    @include small-tablet {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
     &::before {
       content: "";
       position: absolute;
@@ -36,9 +56,23 @@
       height: 100%;
       background: #e0e0e0;
     }
-  }
 
+    @include mobile {
+      display: none !important;
+    }
+  }
+  &__link {
+    @include small-tablet {
+      font-size: 16px;
+    }
+  }
   &__col {
+    --offset: 5.5rem;
+
+    @include tablet {
+      --offset: 3rem;
+    }
+
     flex: 1;
     flex-shrink: 0;
     flex-basis: 30rem;
@@ -49,15 +83,42 @@
 
     .hero-top__text {
       font-size: 1.6rem;
+
+      @include small-tablet {
+        font-size: 16px;
+      }
     }
 
     &:not(:first-child) {
-      padding-left: 5.5rem;
+      padding-left: var(--offset);
       padding-top: 0.9rem;
+
+      @include small-tablet {
+        padding: 0;
+      }
     }
 
     &:not(:last-child) {
-      padding-right: 5.5rem;
+      padding-right: var(--offset);
+      @include small-tablet {
+        padding: 0;
+      }
+      @include mobile {
+        padding-bottom: 30px !important;
+        border-bottom: 1px solid #e0e0e0;
+      }
+    }
+
+    @include small-tablet {
+      flex-basis: auto;
+      width: 45%;
+      padding: 0 var(--offset) !important;
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 !important;
     }
   }
 
@@ -79,11 +140,30 @@
     align-items: center;
     justify-content: flex-start;
     gap: 3rem;
-  }
 
+    @include small-tablet {
+      width: 100%;
+      padding-bottom: 15px !important;
+      border-bottom: 1px solid #e0e0e0;
+      gap: 15px;
+    }
+    @include mobile {
+      padding-bottom: 30px !important;
+    }
+  }
+  &__text {
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
   &__name {
     display: block;
     margin-bottom: 1.2rem;
+
+    @include mobile {
+      margin-bottom: 5px;
+    }
   }
 
   &__image {
@@ -91,7 +171,24 @@
     height: 11.5rem;
     border-radius: 100%;
     flex-shrink: 0;
+    position: relative;
 
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      right: 0;
+      border-radius: 100%;
+      width: 20px;
+      height: 20px;
+      border: 3px solid #fff;
+      background-color: #64d05d;
+    }
+    @include small-tablet {
+      width: 90px;
+      height: 90px;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -103,5 +200,9 @@
     font-family: var(--font-family);
     color: #606778;
     margin-bottom: 2.5rem;
+
+    @include tablet {
+      margin-bottom: 1.5rem;
+    }
   }
 }

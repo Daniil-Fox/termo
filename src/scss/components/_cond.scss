@@ -1,28 +1,51 @@
 .cond {
   padding-top: 12rem;
   padding-bottom: 14rem;
-
+  @include small-tablet {
+    padding-top: 6rem;
+    padding-bottom: 12rem;
+  }
   &__title {
     margin-bottom: 4.5rem;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3.8rem 4.7rem;
+
+    @include small-tablet {
+      gap: 0;
+      display: flex;
+    }
   }
 
   &__item {
     border-radius: 5rem;
     overflow: hidden;
     background-color: #fff;
-
-    border: .3rem solid #e3eaf1;
+    box-sizing: border-box;
+    border: 0.3rem solid #e3eaf1;
     border-top: none;
-
-
+    height: auto;
+    @include tablet {
+      border-radius: 3rem;
+    }
+    @include small-tablet {
+      width: 260px;
+    }
     .benefits-item__content {
       padding: 3.7rem 4.2rem;
+      .list {
+        margin-bottom: 0;
+      }
+      @include tablet {
+        padding: 3rem;
+      }
     }
   }
 }

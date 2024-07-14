@@ -3,7 +3,13 @@
   padding-bottom: 12rem;
   position: relative;
   z-index: 2;
-
+  @include tablet {
+    padding-top: 12rem;
+    padding-bottom: 4rem;
+  }
+  @include small-tablet {
+    padding-top: 6rem;
+  }
   &__shadow {
     position: absolute;
     left: 0;
@@ -22,35 +28,47 @@
     margin: 0 auto;
     max-width: 95%;
     margin-bottom: 6rem;
-  }
 
+    @include tablet {
+      margin-bottom: 4rem;
+    }
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__slider {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 40px;
+  }
   &__tabs {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
 
-    border-bottom: 1px solid #e0e0e0;
     border-radius: 0.5rem;
-
-    margin-bottom: 4rem;
 
     position: relative;
   }
 
   &__tab {
+    box-sizing: border-box;
+    width: auto;
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 160%;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #606778;
-
+    flex-shrink: 0;
     cursor: pointer;
     position: relative;
     padding-bottom: 1.2rem;
     transition: color 0.3s ease-out;
+    white-space: nowrap;
 
+    @include tablet {
+      font-size: 14px;
+    }
     &.active {
       color: #ce3c46;
 
@@ -75,6 +93,20 @@
     }
   }
 
+  &__btn {
+    @include small-tablet {
+      width: 100%;
+      display: none;
+    }
+
+    &--mob {
+      display: none;
+      @include small-tablet {
+        display: flex;
+      }
+    }
+  }
+
   &__line {
     position: absolute;
     left: 0;
@@ -93,6 +125,11 @@
     grid-template-columns: repeat(7, 1fr);
     align-items: flex-start;
     gap: 3rem;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -103,6 +140,10 @@
   &__right {
     grid-column: 5 span;
     margin-left: 3rem;
+
+    @include small-tablet {
+      margin-left: 0;
+    }
   }
 
   &__body {
@@ -123,20 +164,66 @@
   &__image {
     height: 19rem;
     margin-bottom: 4.2rem;
-
+    @include mobile {
+      height: 170px;
+    }
     img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
+      object-position: left;
+
+      @include mobile {
+        object-position: center;
+      }
     }
   }
 }
-
 
 .types-body {
   position: relative;
   padding: 5.2rem 4.6rem;
   padding-top: 0;
 
+  @include tablet {
+    padding: 3rem 3.5rem;
+    padding-top: 40px;
+  }
+  @include mobile {
+    padding: 33px 20px;
+    padding-top: 40px;
+  }
+  &__content {
+    @include small-tablet {
+      box-sizing: content-box;
+
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      will-change: max-height;
+    }
+  }
+  &__more {
+    display: none;
+    @include small-tablet {
+      display: flex;
+    }
+
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    color: #3179df;
+
+    svg {
+      transition: transform 0.3s ease-out;
+    }
+
+    &.active {
+      transform: rotate(180deg);
+    }
+  }
   &::after {
     content: "";
     position: absolute;
@@ -145,15 +232,24 @@
     bottom: 0;
     width: 100%;
     height: calc(100% - 1.5rem);
-    border: .3rem solid #e3eaf1;
+    border: 0.3rem solid #e3eaf1;
 
     border-radius: 5rem;
+
+    @include tablet {
+      border-radius: 3rem;
+    }
   }
 
   &__title {
-
+    display: block;
     font-size: 2rem;
     max-width: 37rem;
+
+    @include mobile {
+      font-size: 18px;
+      max-width: 100%;
+    }
   }
 
   &__theme {
@@ -161,15 +257,24 @@
     position: absolute;
     left: 4rem;
     top: 0;
-    padding: .3rem 1.5rem;
+    padding: 0.3rem 1.5rem;
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 160%;
     letter-spacing: 0.03em;
     text-align: center;
     color: #2d3241;
-
-    background-image: linear-gradient(to bottom, #FFE18F 0%, #FBCD5D 49%, #F6C24C 100%);
+    @include small-tablet {
+      font-size: 14px;
+      padding: 2px 6px;
+      left: 2rem;
+    }
+    background-image: linear-gradient(
+      to bottom,
+      #ffe18f 0%,
+      #fbcd5d 49%,
+      #f6c24c 100%
+    );
   }
 
   &__header {
@@ -178,6 +283,13 @@
     justify-content: space-between;
 
     margin-bottom: 3.5rem;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 17px;
+      margin-bottom: 20px;
+    }
   }
 
   &__video {
@@ -185,8 +297,19 @@
     height: 16rem;
     border-radius: 1rem;
     overflow: hidden;
+    flex-shrink: 0;
+    @include tablet {
+      width: 20rem;
+      height: 12rem;
+    }
 
+    @include small-tablet {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 250 / 145;
+    }
     img {
+      display: block;
       width: 100%;
       height: 100%;
     }

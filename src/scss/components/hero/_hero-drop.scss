@@ -1,9 +1,12 @@
 .hero-drop {
-
   position: relative;
   z-index: 1;
 
   margin-bottom: 0.6rem;
+
+  @include small-tablet {
+    margin-bottom: 0;
+  }
   &__header {
     display: flex;
     align-items: center;
@@ -27,7 +30,7 @@
 
     max-height: 0;
     overflow: hidden;
-    transition: max-height .3s ease-out;
+    transition: max-height 0.3s ease-out;
     will-change: max-height;
     a {
       display: inline-block;

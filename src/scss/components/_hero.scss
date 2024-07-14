@@ -1,3 +1,19 @@
-@import './hero/hero-main';
-@import './hero/hero-top';
-@import './hero/hero-drop';
+@import "./hero/hero-main";
+@import "./hero/hero-top";
+@import "./hero/hero-drop";
+
+.hero-hide {
+  @include tablet {
+    &:first-child {
+      display: none !important;
+    }
+  }
+  @include small-tablet {
+    display: none !important;
+  }
+}
+.hero-map {
+  @include tablet {
+    display: none;
+  }
+}
