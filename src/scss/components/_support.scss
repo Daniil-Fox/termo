@@ -1,0 +1,60 @@
+.support {
+  margin-bottom: 12rem;
+
+  &__container {
+    border: 3px solid #e3eaf1;
+    border-radius: 5rem;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+  }
+
+  &__left {
+
+    padding: 3rem;
+    border-radius: 5rem;
+    width: 100%;
+    max-width: 53rem;
+    background-color: #ecf3fb;
+
+  }
+
+  &__expert {
+    margin-bottom: 3.5rem;
+  }
+
+  &__title {
+    margin-bottom: 1.7rem;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__items {
+    padding: 3rem;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 4.5rem;
+    }
+  }
+}
+
+.support-item {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  &__icon {
+    width: 7.5rem;
+    height: 7.5rem;
+    flex-shrink: 0;
+  }
+
+  &__capture {
+    line-height: 135%;
+    margin-bottom: 0.8rem;
+  }
+}

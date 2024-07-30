@@ -7,24 +7,45 @@
   @include small-tablet {
     margin-bottom: 0;
   }
+
   &__header {
     display: flex;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 1.3rem;
+      height: 0.6rem;
+      background-image: url('./../img/arrow.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+
+      transition: transform .3s ease-out;
+    }
 
     svg {
       width: 1.6rem;
       height: 1.6rem;
       object-fit: contain;
     }
+
+    &.active {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
   }
 
   &__body {
-    padding-left: 2.6rem;
     object-fit: cover;
     position: absolute;
     left: 0;
-    top: 100%;
+    top: calc(100% + 1.5rem);
     z-index: 2;
     backdrop-filter: blur(4px);
 
@@ -32,9 +53,125 @@
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     will-change: max-height;
-    a {
+
+    &>a {
       display: inline-block;
       padding: 0.5rem 0;
     }
+
+    @include small-tablet {
+      top: calc(100% + 20px);
+    }
+  }
+
+  &__content {
+    padding: 2rem;
+    padding-left: 1.7rem;
+    background-color: #fff;
+    border-radius: 1rem;
+
+    @include small-tablet {
+      padding: 20px 15px;
+    }
+  }
+
+  &__block {
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 0%;
+      color: #606778;
+
+      @include small-tablet {
+        font-size: 12px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.3rem;
+
+      @include small-tablet {
+        margin-bottom: 10px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 1.8rem;
+
+      @include small-tablet {
+        margin-bottom: 12px;
+      }
+    }
+
+    &--chat {
+      span {
+        &::after {
+          content: "";
+          display: block;
+          width: 1.5rem;
+          height: 1.5rem;
+          background-image: url('./../img/chat-icon.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+
+          @include small-tablet {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  &__timetable {
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+    display: block;
+    position: relative;
+    padding-left: 2.3rem;
+
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+    color: #2d3241;
+
+    @include small-tablet {
+      padding-top: 20px;
+      padding-left: 20px;
+      font-size: 12px;
+    }
+
+    span {
+      display: block;
+      color: #8b8b8b;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        right: calc(100% + .8rem);
+        top: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-image: url('./../img/timetable.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include small-tablet {
+          width: 12px;
+          height: 12px;
+          right: 105%;
+        }
+      }
+    }
+
+
   }
 }

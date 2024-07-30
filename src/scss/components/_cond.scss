@@ -1,10 +1,12 @@
 .cond {
   padding-top: 12rem;
   padding-bottom: 14rem;
+
   @include small-tablet {
     padding-top: 6rem;
     padding-bottom: 12rem;
   }
+
   &__title {
     margin-bottom: 4.5rem;
 
@@ -24,6 +26,16 @@
     }
   }
 
+  &__bottom {
+    display: none;
+    justify-content: flex-end;
+    margin-top: 10px;
+
+    @include small-tablet {
+      display: flex;
+    }
+  }
+
   &__item {
     border-radius: 5rem;
     overflow: hidden;
@@ -32,19 +44,28 @@
     border: 0.3rem solid #e3eaf1;
     border-top: none;
     height: auto;
+
     @include tablet {
       border-radius: 3rem;
     }
+
     @include small-tablet {
       width: 260px;
     }
+
     .benefits-item__content {
       padding: 3.7rem 4.2rem;
+
       .list {
         margin-bottom: 0;
       }
+
       @include tablet {
         padding: 3rem;
+      }
+
+      @include small-tablet {
+        padding: 24px 20px;
       }
     }
   }

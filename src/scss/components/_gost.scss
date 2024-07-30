@@ -1,0 +1,18 @@
+.gost {
+  margin-bottom: 21rem;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__header {
+    margin-bottom: 6rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+}

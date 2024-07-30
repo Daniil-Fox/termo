@@ -1,10 +1,12 @@
 // ваш код
 .header {
   padding: 2rem 0;
+  position: relative;
 
   @include small-tablet {
     padding: 1rem 0;
   }
+
   &__container {
     display: flex;
     align-items: center;
@@ -18,6 +20,7 @@
       justify-content: space-between;
     }
   }
+
   &__cat {
     display: flex;
     align-items: center;
@@ -50,16 +53,19 @@
     height: 2rem;
     position: relative;
     z-index: 101;
+
     @include mobile {
       width: 20px;
       height: 20px;
     }
+
     .line {
       width: 100%;
       height: 0.25rem;
       background-color: #ce3c46;
       border-radius: 0.3rem;
       transition: 0.3s ease-out 0.3s;
+
       &::before,
       &::after {
         content: "";
@@ -71,9 +77,11 @@
         border-radius: 0.3rem;
         transition: 0.3s ease-out;
       }
+
       &::before {
         top: 0;
       }
+
       &::after {
         bottom: 0;
       }
@@ -82,9 +90,11 @@
     &.active {
       .line {
         transform: rotate(45deg);
+
         &::after {
           transform: rotate(-90deg);
         }
+
         &::before {
           opacity: 0;
         }
@@ -98,8 +108,10 @@
     display: none;
   }
 }
+
 .header-mob {
   display: none;
+
   @include small-tablet {
     display: block;
   }

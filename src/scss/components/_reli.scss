@@ -1,0 +1,61 @@
+.reli {
+  margin-bottom: 14rem;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+  &__header {
+    margin-bottom: 6rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 2rem;
+  }
+}
+
+.reli-item {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  &__content {
+    max-width: 35rem;
+  }
+  &__img {
+    flex-shrink: 0;
+    height: 17rem;
+    width: 13.5rem;
+    position: relative;
+
+
+    img {
+      border-radius: 5rem;
+      width: 100%;
+      height: 100%;
+    }
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      right: -.3rem;
+      bottom: -.3rem;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      overflow: hidden;
+      background-image: url('./../img/check.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__capture {
+    margin-bottom: 1rem;
+  }
+  &__desc {
+    margin: 0;
+  }
+}

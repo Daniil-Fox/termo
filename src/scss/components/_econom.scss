@@ -1,15 +1,44 @@
 .econom {
-  padding-top: 16.4rem;
-  padding-bottom: 13rem;
-  background: #202228;
-  @include tablet {
-    padding-top: 12rem;
-    padding-bottom: 10rem;
+  position: relative;
+  z-index: 2;
+  padding-top: 7.2rem;
+
+  &__container {
+    position: relative;
+    padding-top: 16.4rem;
+    padding-bottom: 13rem;
+    background: #202228;
+
+    @include tablet {
+      padding-top: 12rem;
+      padding-bottom: 10rem;
+    }
+
+    @include small-tablet {
+      padding-top: 75px;
+      padding-bottom: 60px;
+    }
   }
-  @include small-tablet {
-    padding-top: 75px;
-    padding-bottom: 60px;
+
+  &__anchor {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 3;
+    transform: translateX(-50%);
+    width: 15.3rem;
+    height: 4.4rem;
+    background-color: #F1F5FA;
+    mask-image: url('./../img/drop-mask.svg');
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
   &__title {
     display: flex;
     align-items: center;
@@ -21,6 +50,7 @@
       align-items: flex-start;
       gap: 10px;
     }
+
     svg {
       width: 3.3rem;
       height: 3.3rem;
@@ -41,6 +71,7 @@
       margin-bottom: 3rem;
       font-size: 3.6rem;
     }
+
     @include small-tablet {
       font-size: 28px;
       margin-bottom: 5px;
@@ -53,24 +84,28 @@
     font-size: 3.6rem;
     line-height: 130%;
     color: #fff;
+
     @include tablet {
       font-size: 3rem;
     }
+
     @include small-tablet {
       font-size: 24px;
     }
+
     @include mobile {
       font-size: 22px;
     }
+
     span {
       color: #fbcd5d;
     }
   }
 
-  &__container {
-    max-width: calc(117rem + (var(--container-offset) * 2));
-    margin: 0 auto;
-  }
+  // &__container {
+  //   max-width: calc(117rem + (var(--container-offset) * 2));
+  //   margin: 0 auto;
+  // }
 
   &__header {
     display: flex;
@@ -123,6 +158,7 @@
       flex-basis: auto;
       border-radius: 3rem;
     }
+
     @include mobile {
       padding: 0 15px 40px;
     }
@@ -139,15 +175,18 @@
       flex-direction: column;
       align-items: stretch;
     }
+
     @include mobile {
       margin-bottom: 30px;
     }
   }
-  &__item {
-  }
+
+  &__item {}
+
   &__bottom {
     text-align: center;
   }
+
   &__link {
     font-weight: 700;
     font-size: 1.8rem;
@@ -163,6 +202,7 @@
       font-size: 18px;
     }
   }
+
   &__extra {
     @include mobile {
       font-size: 18px;
@@ -187,9 +227,11 @@
     border-radius: 3rem;
     padding-right: 13rem;
   }
+
   @include mobile {
     padding: 20px;
   }
+
   &__img {
     width: 14.6rem;
     height: 17rem;
@@ -225,14 +267,17 @@
     font-size: 2.4rem;
     line-height: 135%;
     color: #2d3241;
+
     @include tablet {
       font-size: 2rem;
       margin-bottom: 1.2rem;
     }
+
     @include mobile {
       font-size: 16px;
       margin-bottom: 10px;
     }
+
     span {
       color: #3179df;
     }
@@ -246,9 +291,11 @@
     @include tablet {
       font-size: 1.6rem;
     }
+
     @include mobile {
       font-size: 14px;
     }
+
     &:not(:last-child) {
       margin-bottom: 0.8rem;
 
@@ -256,6 +303,7 @@
         margin-bottom: 3px;
       }
     }
+
     span {
       font-weight: 700;
       color: #2d3241;
@@ -285,6 +333,7 @@
     padding: 2rem;
     max-width: 15rem;
   }
+
   @include mobile {
     top: unset;
     left: 0;
@@ -298,29 +347,35 @@
     align-items: flex-start;
     gap: 15px;
   }
+
   &__icon {
     margin-bottom: 2.2rem;
     width: 3rem;
     height: 3rem;
+
     @include tablet {
       width: 2.5rem;
       height: 2.5rem;
       margin-bottom: 2rem;
     }
+
     @include mobile {
       width: 30px;
       height: 30px;
     }
+
     svg {
       width: 100%;
       height: 100%;
     }
   }
+
   &__content {
     @include mobile {
       padding-top: 7px;
     }
   }
+
   &__capture {
     margin-bottom: 1rem;
     font-weight: 700;
@@ -331,11 +386,13 @@
     @include tablet {
       font-size: 1.8rem;
     }
+
     @include mobile {
       font-size: 18px;
       margin-bottom: 3px;
     }
   }
+
   &__value {
     font-weight: 700;
     font-size: 2.2rem;
@@ -345,6 +402,7 @@
     @include tablet {
       font-size: 2rem;
     }
+
     @include mobile {
       font-size: 20px;
     }

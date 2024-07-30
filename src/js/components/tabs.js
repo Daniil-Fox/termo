@@ -1,11 +1,17 @@
-// const tabs = document.querySelectorAll('.types__tab')
+const tabs = document.querySelectorAll('.types__tab')
+const tabsContent = document.querySelectorAll('.types__content')
 
-// tabs.forEach(el => {
-//   el.addEventListener('mouseenter', e => {
-//     const activeTab = document.querySelector('.types__tab.active')
-//     const activeTabWidth = activeTab.clientWidth
+const clearActive = () => {
+  tabs.forEach(t => t.classList.remove('active'))
+  tabsContent.forEach(t => t.classList.remove('active'))
+}
+tabs.forEach(el => {
+  el.addEventListener('click', e => {
+    clearActive()
+    const dataset = el.dataset.tabType
+    document.querySelector(`[data-tab-content="${dataset}"]`).classList.add('active')
 
-//     const tabLine = document.createElement('div')
-//     tabLine.classList.add('tabs__line')
-//   })
-// })
+    el.classList.add('active')
+
+  })
+})

@@ -1,9 +1,27 @@
 import { Swiper } from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
+
+Swiper.use([Navigation, Pagination])
 
 new Swiper(".types__slider", {
   slidesPerView: "auto",
   spaceBetween: 20,
 });
+
+
+new Swiper(".video-r__slider", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  navigation: {
+    prevEl: '.video-r__btn--prev',
+    nextEl: '.video-r__btn--next',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  }
+});
+
+
 
 window.addEventListener("DOMContentLoaded", () => {
   const resizableSwiper = (

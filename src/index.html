@@ -1,18 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-  @include('partials/head.html')
+@include('partials/head.html')
 
-  <body class="page__body">
-    <div class="site-container">
-      @include('partials/header.html')
-      <main class="main">
-        @include('partials/hero.html') @include('partials/benefits.html')
-        @include('partials/production.html') @include('partials/cta.html')
-        @include('partials/types.html') @include('partials/temp.html')
-        @include('partials/calc.html') @include('partials/cond.html')
-        @include('partials/econom.html') @include('partials/cta-ec.html')
-      </main>
-      @include('partials/footer.html')
-    </div>
-  </body>
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/hero.html') @include('partials/benefits.html')
+      @include('partials/production.html') @include('partials/cta.html')
+      @include('partials/types.html') @include('partials/temp.html')
+      @include('partials/calc.html') @include('partials/cond.html')
+      @include('partials/econom.html') @include('partials/cta-ec.html')
+      @include('partials/hydro.html') @include('partials/service.html')
+      @include('partials/prompt.html')
+      @include('partials/video-r.html')
+      @include('partials/reli.html')
+      @include('partials/blocks.html')
+      @include('partials/cta-conference.html')
+      @include('partials/tpo.html')
+      @include('partials/support.html')
+      @include('partials/gost.html')
+      @include('partials/visit.html')
+      @include('partials/vidgets.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+
+
+  <script>
+
+    window.map = null;
+
+    main();
+    async function main() {
+      await ymaps3.ready;
+      const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;
+
+      const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
+
+      map = new YMap(
+        document.getElementById('map'),
+        {location: {
+          center: [39.002505, 45.126608],
+          zoom: 14,
+        }, showScaleInCopyrights: true},
+        [
+          new YMapDefaultSchemeLayer({}),
+          new YMapDefaultFeaturesLayer({})
+        ]
+      );
+
+        const marker = new YMapDefaultMarker({
+          coordinates: [39.002505, 45.126608],
+          color: '#FF2400'
+        });
+        map.addChild(marker);
+    }
+  </script>
+</body>
+
 </html>

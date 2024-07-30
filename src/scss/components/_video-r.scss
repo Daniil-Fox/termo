@@ -1,0 +1,122 @@
+.video-r {
+  margin-bottom: 12rem;
+  &__title {
+    margin-bottom: 2rem;
+  }
+  &__header {
+    margin-bottom: 6rem;
+  }
+  &__wrapper {
+    position: relative;
+    margin-bottom: 4rem;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    padding-right: 20rem;
+    padding-left: 20rem;
+  }
+
+  &__pagination {
+    position: static;
+    width: auto !important;
+  }
+  &__link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  &__btn {
+    position: absolute;
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+       width: 2rem;
+       height: 1.8rem;
+    }
+
+    &--prev {
+      left: 0;
+      top: 50%;
+      transform: translate(calc(-100% - 2rem));
+    }
+    &--next {
+      right: 0;
+      top: 50%;
+      transform: translate(calc(100% + 2rem));
+    }
+  }
+}
+
+
+.video-item {
+  padding: 2.8rem;
+  border-radius: 5rem;
+  background-color: #ecf3fb;
+
+  &__image {
+    height: 20rem;
+    border-radius: 3rem;
+    overflow: hidden;
+    margin-bottom: 3.5rem;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 7.7rem;
+      height: 5.2rem;
+
+      background-image: url('./../img/youtube-icon.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__capture {
+    display: block;
+    margin-bottom: 5rem;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 140%;
+    color: #2d3241;
+    span {
+      color: #ce3c46;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration-skip-ink: none;
+    color: #3179df;
+
+    span {
+      text-decoration: underline;
+
+    }
+  }
+}

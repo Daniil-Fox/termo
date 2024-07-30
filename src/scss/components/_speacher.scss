@@ -1,0 +1,87 @@
+.speacher {
+  padding: 3rem;
+  background-color: #f1f5fa;
+  border-radius: 3rem;
+  display: flex;
+  gap: 6.5rem;
+
+  &__about {
+    flex-shrink: 0;
+    max-width: 12rem;
+  }
+  &__img {
+    margin-bottom: 1.6rem;
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid #fff;
+    position: relative;
+    border-radius: 100%;
+    img {
+      overflow: hidden;
+      border-radius: 100%;
+      width: 100%;
+      height: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      right: 0.5rem;
+      bottom: 0.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 100%;
+      border: 3px solid #fff;
+      background-color: #64d05d;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 130%;
+    color: #2d3241;
+  }
+
+  &__prof {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 156%;
+    color: #606778;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    padding-top: 3rem;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2.5rem;
+      height: 2rem;
+      background-image: url("./../img/comma.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__desc {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 135%;
+    color: #2d3241;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}

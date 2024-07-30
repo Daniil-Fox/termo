@@ -22,3 +22,19 @@ menuBurger.addEventListener("click", (e) => {
     }, 300);
   }
 });
+
+
+const vidgets = document.querySelector('.vidgets')
+
+if(vidgets){
+  const vidgetsClose = vidgets.querySelector('.vidgets__close')
+
+  vidgetsClose.addEventListener('click', e => {
+    e.preventDefault()
+
+    vidgets.classList.add('hidden')
+    setTimeout(() => {
+      vidgets.remove();
+    }, 300)
+  })
+}

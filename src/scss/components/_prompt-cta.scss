@@ -1,0 +1,9 @@
+.prompt-cta {
+  margin-top: -10rem;
+
+  &__container {
+    background-image: url("./../img/drawing-2x.webp"),
+        linear-gradient(24deg, #ecf3fb 0%, #c2d4e9 100%);
+    background-size: 68.9rem 100%, cover;
+  }
+}

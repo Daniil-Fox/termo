@@ -1,0 +1,142 @@
+.visit {
+  position: relative;
+  padding-top: 7.7rem;
+
+  &__wrapper {
+    padding: 13rem 0;
+    background-color: #202228;
+    position: relative;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 45rem);
+    gap: 4rem 2rem;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    text-align: left;
+    color: #fff;
+  }
+
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &__capture {
+    font-weight: 700;
+    color: #ce3c46;
+  }
+
+  &__value {
+    color: #fff;
+  }
+
+  &__tel {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 130%;
+    color: #838ca0;
+
+    a {
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 160%;
+      color: #fff;
+    }
+  }
+
+  &__info {
+    position: relative;
+
+
+  }
+
+  &__img,
+  &__map {
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__subcapture {
+    position: absolute;
+    z-index: 3;
+    left: 2.5rem;
+    top: 0;
+    border-radius: 5px;
+    transform: translateY(-50%);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #2d3241;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, #FFE18F, #FBCD5D, #F6C24C);
+  }
+
+  &__download {
+    a {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__write {
+    margin-bottom: 6rem;
+    max-width: 53rem;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    flex-shrink: 0;
+    border-radius: 100%;
+    background-color: #2D2F37;
+
+    padding: 1.6rem 1rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__copy {
+    margin-bottom: 4.5rem;
+  }
+}
+
+.visit-copy {
+  &__desc {
+    font-family: var(--font-family);
+    margin: 0;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 130%;
+    color: #fff;
+  }
+}
