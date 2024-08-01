@@ -3005,10 +3005,10 @@ a {
     font-size: 14px;
   }
 }
-.types__tab.active {
+.types__tab.swiper-slide-thumb-active {
   color: #ce3c46;
 }
-.types__tab.active::before {
+.types__tab.swiper-slide-thumb-active::before {
   width: 100%;
   opacity: 1;
 }
@@ -3043,28 +3043,19 @@ a {
   transition: 0.3s ease-out;
 }
 .types__content {
-  display: none;
-  -ms-grid-columns: (1fr)[7];
-  grid-template-columns: repeat(7, 1fr);
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
-.types__content.active {
   display: -ms-grid;
   display: grid;
-}
-@media (max-width: 768px) {
-  .types__content.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+  -ms-grid-columns: (1fr)[7];
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3rem;
+  margin-bottom: 3rem;
+  height: 100%;
 }
 @media (max-width: 768px) {
   .types__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -3095,10 +3086,12 @@ a {
 }
 .types__desc {
   margin: 1.2rem 0;
+  font-size: 1.6rem;
+  line-height: 140%;
 }
 .types__image {
   height: 19rem;
-  margin-bottom: 4.2rem;
+  margin-top: auto;
 }
 @media (max-width: 576px) {
   .types__image {
@@ -3258,6 +3251,7 @@ a {
   overflow: hidden;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  position: relative;
 }
 @media (max-width: 1024px) {
   .types-body__video {
@@ -3272,6 +3266,22 @@ a {
     aspect-ratio: 250/145;
   }
 }
+.types-body__video::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 58px;
+  height: 40px;
+  background-image: url("./../img/youtube-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
 .types-body__video img {
   display: block;
   width: 100%;
@@ -3279,6 +3289,12 @@ a {
 }
 .types-body__desc {
   margin-bottom: 2rem;
+  font-size: 1.6rem;
+  line-height: 140%;
+}
+.types-body__desc ol li,
+.types-body__desc ul li {
+  line-height: 140%;
 }
 .types-body__price {
   display: -webkit-box;
@@ -3295,6 +3311,12 @@ a {
 }
 .types-body__price span {
   color: #3179df;
+}
+
+.types-content-slider .swiper-slide {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
 }
 
 .clients {
@@ -3437,10 +3459,10 @@ a {
   }
 }
 .temp__image {
-  padding: 6.4rem 5rem;
+  padding: 6.4rem 4.4rem;
   border-radius: 5rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(#000)), url("./../img/production/03-2x.webp");
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000 100%), url("./../img/production/03-2x.webp");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(#000)), url("./../img/temp/main-2x.webp");
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000 100%), url("./../img/temp/main-2x.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -6121,4 +6143,63 @@ a {
   .vidgets__item:hover .vidgets__close {
     background-color: rgba(45, 50, 65, 0.95);
   }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: opacity 0.3s ease-out, z-index 0.3s ease-out;
+  transition: opacity 0.3s ease-out, z-index 0.3s ease-out;
+}
+.modal.active {
+  opacity: 1;
+  z-index: 120;
+}
+.modal__body {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.modal__close {
+  position: absolute;
+  right: 5.5rem;
+  top: 5.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("./../img/cross.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.modal-video__body {
+  position: static;
+  width: 80%;
+  aspect-ratio: 16/9;
+  background-color: #000;
+}
+.modal-video__body iframe {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }/*# sourceMappingURL=main.css.map */

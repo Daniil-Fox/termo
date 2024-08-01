@@ -87,7 +87,7 @@
       font-size: 14px;
     }
 
-    &.active {
+    &.swiper-slide-thumb-active {
       color: #ce3c46;
 
       &::before {
@@ -131,21 +131,15 @@
   }
 
   &__content {
-    display: none;
+    display: grid;
     grid-template-columns: repeat(7, 1fr);
-    align-items: flex-start;
     gap: 3rem;
     margin-bottom: 3rem;
 
-    &.active {
-      display: grid;
-
-      @include small-tablet {
-        display: flex;
-      }
-    }
+    height: 100%;
 
     @include small-tablet {
+      display: flex;
       flex-direction: column;
     }
   }
@@ -177,11 +171,13 @@
 
   &__desc {
     margin: 1.2rem 0;
+    font-size: 1.6rem;
+    line-height: 140%;
   }
 
   &__image {
     height: 19rem;
-    margin-bottom: 4.2rem;
+    margin-top: auto;
 
     @include mobile {
       height: 170px;
@@ -323,6 +319,7 @@
     border-radius: 1rem;
     overflow: hidden;
     flex-shrink: 0;
+    position: relative;
 
     @include tablet {
       width: 20rem;
@@ -335,6 +332,22 @@
       aspect-ratio: 250 / 145;
     }
 
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 58px;
+      height: 40px;
+
+      background-image: url('./../img/youtube-icon.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+
     img {
       display: block;
       width: 100%;
@@ -344,6 +357,15 @@
 
   &__desc {
     margin-bottom: 2rem;
+    font-size: 1.6rem;
+    line-height: 140%;
+
+    ol,
+    ul {
+      li {
+        line-height: 140%;
+      }
+    }
   }
 
   &__price {
@@ -359,5 +381,12 @@
     span {
       color: #3179df;
     }
+  }
+}
+
+.types-content-slider {
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
   }
 }

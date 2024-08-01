@@ -1,6 +1,7 @@
 .temp {
   padding-top: 12rem;
   padding-bottom: 6rem;
+
   @include small-tablet {
     padding-top: 6rem;
     padding-bottom: 5.5rem;
@@ -38,17 +39,18 @@
 
   &__content {
     padding: 6rem 0;
+
     @include small-tablet {
       padding: 0;
     }
   }
 
   &__image {
-    padding: 6.4rem 5rem;
+    padding: 6.4rem 4.4rem;
     border-radius: 5rem;
 
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000 100%),
-      url("./../img/production/03-2x.webp");
+      url("./../img/temp/main-2x.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -76,13 +78,16 @@
     font-size: 3rem;
     line-height: 130%;
     color: #fff;
+
     @include small-tablet {
       font-size: 2.4rem;
     }
+
     @include mobile {
       font-size: 18px;
       margin-bottom: 6px;
     }
+
     .blue {
       color: #468cdd;
     }
@@ -150,12 +155,15 @@
     font-size: 2.2rem;
     line-height: 130%;
     color: #2d3241;
+
     @include small-tablet {
       font-size: 16px;
     }
+
     @include mobile {
       font-size: 14px;
     }
+
     span {
       font-weight: 700;
     }
@@ -167,22 +175,27 @@
   border-radius: 5rem;
   overflow: hidden;
   background-color: #ecf3fb;
+
   @include tablet {
     border-radius: 3rem;
   }
+
   @include mobile {
     &:not(:nth-child(1)) {
       display: none !important;
     }
   }
+
   &__image {
     height: 17rem;
     border-radius: 3rem;
     margin-bottom: 3.5rem;
     overflow: hidden;
+
     @include tablet {
       margin-bottom: 2rem;
     }
+
     @include mobile {
       height: 180px;
       margin-bottom: 28px;
@@ -210,6 +223,7 @@
     @include tablet {
       font-size: 2rem;
     }
+
     @include mobile {
       font-size: 18px;
     }
@@ -223,10 +237,12 @@
     font-size: 2rem;
     line-height: 140%;
     color: #000;
+
     @include tablet {
       font-size: 1.6rem;
       margin-bottom: 2rem;
     }
+
     @include mobile {
       font-size: 16px;
     }

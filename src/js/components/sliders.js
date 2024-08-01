@@ -1,9 +1,9 @@
 import { Swiper } from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { EffectFade, Navigation, Pagination, Thumbs } from "swiper/modules";
 
-Swiper.use([Navigation, Pagination])
+Swiper.use([Navigation, Pagination, EffectFade, Thumbs])
 
-new Swiper(".types__slider", {
+const typesThumbs = new Swiper(".types__slider", {
   slidesPerView: "auto",
   spaceBetween: 20,
 });
@@ -21,6 +21,24 @@ new Swiper(".video-r__slider", {
   }
 });
 
+
+new Swiper('.types-content-slider', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  effect: 'fade',
+  speed: 300,
+  fadeEffect: {
+    crossFade: true
+  },
+  thumbs: {
+    swiper: typesThumbs
+  },
+  on: {
+    'slideChange': (swiper) => {
+      typesThumbs.activeIndex = swiper.activeIndex
+    }
+  }
+})
 
 
 window.addEventListener("DOMContentLoaded", () => {

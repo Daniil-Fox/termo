@@ -6,885 +6,657 @@
     </h2>
     <div class="types__slider swiper">
       <ul class="types__tabs swiper-wrapper list-reset">
-        <li class="types__tab swiper-slide active" data-tab-type="heating">Отопление</li>
         <li class="types__tab swiper-slide" data-tab-type="gvs">ГВС</li>
+        <li class="types__tab swiper-slide" data-tab-type="heating">Отопление</li>
         <li class="types__tab swiper-slide" data-tab-type="warm-floor">Теплый пол</li>
         <li class="types__tab swiper-slide" data-tab-type="food">Пищевые среды</li>
-        <li class="types__tab swiper-slide" data-tab-type="soldered">Паяный</li>
-        <li class="types__tab swiper-slide" data-tab-type="waterpool">Для бассейна</li>
-        <li class="types__tab swiper-slide" data-tab-type="steam">Пароводяной</li>
-        <li class="types__tab swiper-slide" data-tab-type="service">Сервис</li>
+        <li class="types__tab swiper-slide" data-tab-type="waterpool">Бассейн</li>
+        <li class="types__tab swiper-slide" data-tab-type="soldered">Промышленность</li>
+        <li class="types__tab swiper-slide" data-tab-type="steam">Вентиляция</li>
+        <li class="types__tab swiper-slide" data-tab-type="service">Майнинг</li>
       </ul>
     </div>
-
-    <div class="types__content active" data-tab-content="heating">
-      <div class="types__left">
-        <span class="types__capture title5">
-          Теплообменник для системы отопления
-        </span>
-        <p class="types__desc text text--small">
-          Задача этого теплообменника передать тепло от источника тепла (котел,
-          тепловые сети) к потребителям тепла (батареи, воздушное отопление и
-          т.д.). Контур источника тепла и контур потребителя тепла гидравлически
-          разделены - теплоносители не смешиваются. Вы сможете использовать в
-          качестве рабочих сред воду и гликольные смеси.
-        </p>
-        <div class="types__image">
-          <picture>
-            <source
-              srcset="./img/types/01-2x.webp"
-              type="image/webp"
-              media="(min-width: 1440px)"
-            />
-            <source srcset="./img/types/01-2x.webp" type="image/webp" />
-            <img
-              src="./img/types/01.png"
-              srcset="./img/types/01-2x.png 2x"
-              alt=""
-            />
-          </picture>
-        </div>
-
-
-      </div>
-      <div class="types__right">
-        <div class="types__body types-body">
-          <span class="types-body__theme">Пример отгрузки</span>
-          <div class="types-body__header">
-            <span class="types-body__title title5">
-              Теплообменник SN19-31-580 кВт для системы ГВС для жилого дома,
-              г. Невинномысск
-            </span>
-
-            <div class="types-body__video">
-              <img src="./img/types/cover.jpg" alt="" />
-            </div>
-          </div>
-          <div class="types-body__content">
-            <div class="types-body__wrapper">
-              <div class="types-body__desc text">
-                К нам обратился представитель управляющей
-                компании из г. Невинномысска и поставил задачу посчитать и
-                изготовить теплообменник для подогрева горячей воды
-                в многоквартирном жилом доме. Для подбора теплообменного
-                аппарата наш инженер уточнил данные для расчета, а именно:
-                <ol>
-                  <li>Расход ГВС в час пик - 9т/ч.</li>
-                  <li>Температуру греющего теплоносителя - 70/40С</li>
-                  <li>Температура нагреваемой воды 5/60</li>
-                </ol>
-                Теплообменник мощностью 580 кВт, расход 9,05 т/ч, количество
-                пластин 31 шт. был собран за 1 день.
+    <div class="types-content-slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="types__content active" data-tab-content="gvs">
+            <div class="types__left">
+              <span class="types__capture title5">
+                Теплообменник для горячего водоснабжения
+              </span>
+              <p class="types__desc text text--small">
+                В системе горячего водоснабжения теплообменник нагревает холодную воду (5С) до (60С). При температуре
+                (60С) уничтожаются все бактерии и микроорганизмы, содержащиеся в воде. За счет того, что контуры
+                теплообменника гидравлически разделены - горячая вода будет питьевого качества. 
+              </p>
+              <div class="types__image">
+                <picture>
+                  <source srcset="./img/types/01-2x.webp" type="image/webp" media="(min-width: 1440px)" />
+                  <source srcset="./img/types/01-2x.webp" type="image/webp" />
+                  <img src="./img/types/01.png" srcset="./img/types/01-2x.png 2x" alt="" />
+                </picture>
               </div>
 
-              <div class="types-body__price text text--small">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_11_561)">
-                    <path
-                      d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
-                      fill="#3179DF"
-                    />
-                    <path
-                      d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
-                      fill="#3179DF"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_11_561">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
 
-                <span>Стоимость: 170 200 рублей</span> (на дату 20.03.2023)
+            </div>
+            <div class="types__right">
+              <div class="types__body types-body">
+                <span class="types-body__theme">Пример отгрузки</span>
+                <div class="types-body__header">
+                  <span class="types-body__title title5">
+                    Теплообменник SN19-31-580 кВт для системы ГВС для жилого дома,
+                    г. Невинномысск
+                  </span>
+
+                  <div class="types-body__video" data-video-src="https://www.youtube.com/embed/2Dn55zynHUM">
+                    <img src="./img/types/posters/01.webp" alt="" />
+                  </div>
+                </div>
+                <div class="types-body__content">
+                  <div class="types-body__wrapper">
+                    <div class="types-body__desc text">
+                      К нам обратился представитель управляющей
+                      компании из г. Невинномысска и поставил задачу посчитать и
+                      изготовить теплообменник для подогрева горячей воды
+                      в многоквартирном жилом доме. Для подбора теплообменного
+                      аппарата наш инженер уточнил данные для расчета, а именно:
+                      <ol>
+                        <li>Расход ГВС в час пик - 9т/ч.</li>
+                        <li>Температуру греющего теплоносителя - 70/40С</li>
+                        <li>Температура нагреваемой воды 5/60</li>
+                      </ol>
+                      <strong>
+                        Теплообменник мощностью 580 кВт, расход 9,05 т/ч, количество
+                        пластин 31 шт. был собран за 1 день.
+                      </strong>
+                    </div>
+
+                    <div class="types-body__price text text--small">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_11_561)">
+                          <path
+                            d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
+                            fill="#3179DF" />
+                          <path
+                            d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
+                            fill="#3179DF" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_11_561">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                      <span>Стоимость: 170 200 рублей</span> (на дату 20.03.2023)
+                    </div>
+                  </div>
+                </div>
+                <div class="types-body__more">
+                  Подробнее
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L6 6L11 1" stroke="#3179DF" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="types-body__more">
-            Подробнее
-            <svg
-              width="12"
-              height="8"
-              viewBox="0 0 12 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1L6 6L11 1"
-                stroke="#3179DF"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="types__content" data-tab-content="gvs">
-      <div class="types__left">
-        <span class="types__capture title5">
-          Теплообменник для системы отопления
-        </span>
-        <p class="types__desc text text--small">
-          Задача этого теплообменника передать тепло от источника тепла (котел,
-          тепловые сети) к потребителям тепла (батареи, воздушное отопление и
-          т.д.). Контур источника тепла и контур потребителя тепла гидравлически
-          разделены - теплоносители не смешиваются. Вы сможете использовать в
-          качестве рабочих сред воду и гликольные смеси.
-        </p>
-        <div class="types__image">
-          <picture>
-            <source
-              srcset="./img/types/01-2x.webp"
-              type="image/webp"
-              media="(min-width: 1440px)"
-            />
-            <source srcset="./img/types/01-2x.webp" type="image/webp" />
-            <img
-              src="./img/types/01.png"
-              srcset="./img/types/01-2x.png 2x"
-              alt=""
-            />
-          </picture>
-        </div>
-
-
-      </div>
-      <div class="types__right">
-        <div class="types__body types-body">
-          <span class="types-body__theme">Пример отгрузки</span>
-          <div class="types-body__header">
-            <span class="types-body__title title5">
-              Теплообменник SN19-31-580 кВт для системы ГВС для жилого дома,
-              г. Невинномысск
-            </span>
-
-            <div class="types-body__video">
-              <img src="./img/types/cover.jpg" alt="" />
-            </div>
-          </div>
-          <div class="types-body__content">
-            <div class="types-body__wrapper">
-              <div class="types-body__desc text">
-                К нам обратился представитель управляющей
-                компании из г. Невинномысска и поставил задачу посчитать и
-                изготовить теплообменник для подогрева горячей воды
-                в многоквартирном жилом доме. Для подбора теплообменного
-                аппарата наш инженер уточнил данные для расчета, а именно:
-                <ol>
-                  <li>Расход ГВС в час пик - 9т/ч.</li>
-                  <li>Температуру греющего теплоносителя - 70/40С</li>
-                  <li>Температура нагреваемой воды 5/60</li>
-                </ol>
-                Теплообменник мощностью 580 кВт, расход 9,05 т/ч, количество
-                пластин 31 шт. был собран за 1 день.
-              </div>
-
-              <div class="types-body__price text text--small">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_11_561)">
-                    <path
-                      d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
-                      fill="#3179DF"
-                    />
-                    <path
-                      d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
-                      fill="#3179DF"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_11_561">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-
-                <span>Стоимость: 170 200 рублей</span> (на дату 20.03.2023)
+        <div class="swiper-slide">
+          <div class="types__content" data-tab-content="heating">
+            <div class="types__left">
+              <span class="types__capture title5">
+                Теплообменник для системы отопления
+              </span>
+              <p class="types__desc text text--small">
+                Задача этого теплообменника передать тепло от источника тепла (котел, тепловые сети) к потребителям
+                тепла (батареи, воздушное отопление и т.д.). Контур источника тепла и контур потребителя тепла
+                гидравлически разделены - теплоносители не смешиваются. Вы сможете использовать в качестве рабочих сред
+                воду и гликольные смеси.
+              </p>
+              <div class="types__image">
+                <picture>
+                  <source srcset="./img/types/02-2x.webp" type="image/webp" media="(min-width: 1440px)" />
+                  <source srcset="./img/types/02-2x.webp" type="image/webp" />
+                  <img src="./img/types/02.png" srcset="./img/types/02-2x.png 2x" alt="" />
+                </picture>
               </div>
             </div>
-          </div>
-          <div class="types-body__more">
-            Подробнее
-            <svg
-              width="12"
-              height="8"
-              viewBox="0 0 12 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1L6 6L11 1"
-                stroke="#3179DF"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
+            <div class="types__right">
+              <div class="types__body types-body">
+                <span class="types-body__theme">Пример отгрузки</span>
+                <div class="types-body__header">
+                  <span class="types-body__title title5">
+                    Теплообменник SN14-21, 160 кВт для системы отопления в ИТП, г. Раменское
+                  </span>
+
+                  <div class="types-body__video" data-video-src="https://www.youtube.com/embed/Uy69C2s63Fs">
+                    <img src="./img/types/posters/02.webp" alt="" />
+                  </div>
+                </div>
+                <div class="types-body__content">
+                  <div class="types-body__wrapper">
+                    <div class="types-body__desc text">
+                      К нам обратился заказчик из г. Раменское. Для него мы изготовили пластинчатый теплообменник для
+                      системы отопления. Оборудование установлено в индивидуальном тепловом пункте. Теплообменный
+                      аппарат обладает следующими характеристиками:
+                      <ol>
+                        <li>Тепловая нагрузка 160 кВт.</li>
+                        <li>Греющий теплоноситель (вода). Вход: 70С, Выход: 50С</li>
+                        <li>Нагреваемый контур (система отопления здания) От 40С до 60С.</li>
+                      </ol>
+                      <strong>
+                        Сборка теплообменника из 21 пластины заняла 1 день. Оборудование отправили ТК в г. Раменское,
+                        доставка заняла 5 дней.
+                      </strong>
+                    </div>
+
+                    <div class="types-body__price text text--small">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_11_561)">
+                          <path
+                            d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
+                            fill="#3179DF" />
+                          <path
+                            d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
+                            fill="#3179DF" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_11_561">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                      <span>Стоимость: 111 600 рублей</span> (на дату 06.04.2023)
+                    </div>
+                  </div>
+                </div>
+                <div class="types-body__more">
+                  Подробнее
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L6 6L11 1" stroke="#3179DF" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="types__content" data-tab-content="warm-floor">
-      <div class="types__left">
-        <span class="types__capture title5">
-          Теплообменник для системы отопления
-        </span>
-        <p class="types__desc text text--small">
-          Задача этого теплообменника передать тепло от источника тепла (котел,
-          тепловые сети) к потребителям тепла (батареи, воздушное отопление и
-          т.д.). Контур источника тепла и контур потребителя тепла гидравлически
-          разделены - теплоносители не смешиваются. Вы сможете использовать в
-          качестве рабочих сред воду и гликольные смеси.
-        </p>
-        <div class="types__image">
-          <picture>
-            <source
-              srcset="./img/types/01-2x.webp"
-              type="image/webp"
-              media="(min-width: 1440px)"
-            />
-            <source srcset="./img/types/01-2x.webp" type="image/webp" />
-            <img
-              src="./img/types/01.png"
-              srcset="./img/types/01-2x.png 2x"
-              alt=""
-            />
-          </picture>
-        </div>
-
-
-      </div>
-      <div class="types__right">
-        <div class="types__body types-body">
-          <span class="types-body__theme">Пример отгрузки</span>
-          <div class="types-body__header">
-            <span class="types-body__title title5">
-              Теплообменник SN19-31-580 кВт для системы ГВС для жилого дома,
-              г. Невинномысск
-            </span>
-
-            <div class="types-body__video">
-              <img src="./img/types/cover.jpg" alt="" />
-            </div>
-          </div>
-          <div class="types-body__content">
-            <div class="types-body__wrapper">
-              <div class="types-body__desc text">
-                К нам обратился представитель управляющей
-                компании из г. Невинномысска и поставил задачу посчитать и
-                изготовить теплообменник для подогрева горячей воды
-                в многоквартирном жилом доме. Для подбора теплообменного
-                аппарата наш инженер уточнил данные для расчета, а именно:
-                <ol>
-                  <li>Расход ГВС в час пик - 9т/ч.</li>
-                  <li>Температуру греющего теплоносителя - 70/40С</li>
-                  <li>Температура нагреваемой воды 5/60</li>
-                </ol>
-                Теплообменник мощностью 580 кВт, расход 9,05 т/ч, количество
-                пластин 31 шт. был собран за 1 день.
+        <div class="swiper-slide">
+          <div class="types__content" data-tab-content="warm-floor">
+            <div class="types__left">
+              <span class="types__capture title5">
+                Теплообменник для тёплого пола
+              </span>
+              <p class="types__desc text text--small">
+                Этот теплообменник передает тепло от источника тепла к теплоносителю, который циркулирует внутри теплого
+                пола. В качестве теплоносителей можно использовать гликоли и антифризы. За счет компактных размеров
+                пластинчатые теплообменники легко "спрятать" в нишу или коллекторный шкаф.
+              </p>
+              <div class="types__image">
+                <picture>
+                  <source srcset="./img/types/03-2x.webp" type="image/webp" media="(min-width: 1440px)" />
+                  <source srcset="./img/types/03-2x.webp" type="image/webp" />
+                  <img src="./img/types/03.png" srcset="./img/types/03-2x.png 2x" alt="" />
+                </picture>
               </div>
 
-              <div class="types-body__price text text--small">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_11_561)">
-                    <path
-                      d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
-                      fill="#3179DF"
-                    />
-                    <path
-                      d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
-                      fill="#3179DF"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_11_561">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
 
-                <span>Стоимость: 170 200 рублей</span> (на дату 20.03.2023)
+            </div>
+            <div class="types__right">
+              <div class="types__body types-body">
+                <span class="types-body__theme">Пример отгрузки</span>
+                <div class="types-body__header">
+                  <span class="types-body__title title5">
+                    Теплообменник SN04-16 для теплого пола, г. Ставрополь
+                  </span>
+
+                  <div class="types-body__video" data-video-src="https://www.youtube.com/embed/PaXeejE7U5M">
+                    <img src="./img/types/posters/03.webp" alt="" />
+                  </div>
+                </div>
+                <div class="types-body__content">
+                  <div class="types-body__wrapper">
+                    <div class="types-body__desc text">
+                      Этот теплообменник мы рассчитывали для заказчика из г. Ставрополь. Он поставил задачу подобрать
+                      аппарат для системы теплого пола, который должен обладать следующими техническими
+                      характеристиками:
+                      <ol>
+                        <li>Площадь теплого пола - 270 м2. Из этого значения мы определили мощность теплообменника - 40
+                          кВт.</li>
+                        <li>Температура греющего теплоносителя - 80С</li>
+                        <li>Контур теплого пола (пропилен гликоль) нагреваем с 25С до 35С</li>
+                      </ol>
+                      <strong>
+                        Сборка теплообменника заняла 1 день. Оборудование отправили ТК в г. Ставрополь.
+                      </strong>
+                    </div>
+
+                    <div class="types-body__price text text--small">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_11_561)">
+                          <path
+                            d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
+                            fill="#3179DF" />
+                          <path
+                            d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
+                            fill="#3179DF" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_11_561">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                      <span>Стоимость: N рублей</span> (на дату 25.10.2022)
+                    </div>
+                  </div>
+                </div>
+                <div class="types-body__more">
+                  Подробнее
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L6 6L11 1" stroke="#3179DF" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="types-body__more">
-            Подробнее
-            <svg
-              width="12"
-              height="8"
-              viewBox="0 0 12 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1L6 6L11 1"
-                stroke="#3179DF"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="types__content" data-tab-content="food">
-      <div class="types__left">
-        <span class="types__capture title5">
-          Теплообменник для системы отопления
-        </span>
-        <p class="types__desc text text--small">
-          Задача этого теплообменника передать тепло от источника тепла (котел,
-          тепловые сети) к потребителям тепла (батареи, воздушное отопление и
-          т.д.). Контур источника тепла и контур потребителя тепла гидравлически
-          разделены - теплоносители не смешиваются. Вы сможете использовать в
-          качестве рабочих сред воду и гликольные смеси.
-        </p>
-        <div class="types__image">
-          <picture>
-            <source
-              srcset="./img/types/01-2x.webp"
-              type="image/webp"
-              media="(min-width: 1440px)"
-            />
-            <source srcset="./img/types/01-2x.webp" type="image/webp" />
-            <img
-              src="./img/types/01.png"
-              srcset="./img/types/01-2x.png 2x"
-              alt=""
-            />
-          </picture>
-        </div>
-
-
-      </div>
-      <div class="types__right">
-        <div class="types__body types-body">
-          <span class="types-body__theme">Пример отгрузки</span>
-          <div class="types-body__header">
-            <span class="types-body__title title5">
-              Теплообменник SN19-31-580 кВт для системы ГВС для жилого дома,
-              г. Невинномысск
-            </span>
-
-            <div class="types-body__video">
-              <img src="./img/types/cover.jpg" alt="" />
-            </div>
-          </div>
-          <div class="types-body__content">
-            <div class="types-body__wrapper">
-              <div class="types-body__desc text">
-                К нам обратился представитель управляющей
-                компании из г. Невинномысска и поставил задачу посчитать и
-                изготовить теплообменник для подогрева горячей воды
-                в многоквартирном жилом доме. Для подбора теплообменного
-                аппарата наш инженер уточнил данные для расчета, а именно:
-                <ol>
-                  <li>Расход ГВС в час пик - 9т/ч.</li>
-                  <li>Температуру греющего теплоносителя - 70/40С</li>
-                  <li>Температура нагреваемой воды 5/60</li>
-                </ol>
-                Теплообменник мощностью 580 кВт, расход 9,05 т/ч, количество
-                пластин 31 шт. был собран за 1 день.
+        <div class="swiper-slide">
+          <div class="types__content" data-tab-content="food">
+            <div class="types__left">
+              <span class="types__capture title5">
+                Теплообменник для пищевых сред
+              </span>
+              <p class="types__desc text text--small">
+                Пластины и патрубки из нержавеющей стали, уплотнения из пищевой резины позволяют применять пластинчатые
+                теплообменники в пищевом производстве. Мы изготовим теплообменники для охлаждения сусла, пастеризации
+                молока, а также нагрева или охлаждения любых пищевых сред.
+              </p>
+              <div class="types__image">
+                <picture>
+                  <source srcset="./img/types/04-2x.webp" type="image/webp" media="(min-width: 1440px)" />
+                  <source srcset="./img/types/04-2x.webp" type="image/webp" />
+                  <img src="./img/types/04.png" srcset="./img/types/04-2x.png 2x" alt="" />
+                </picture>
               </div>
 
-              <div class="types-body__price text text--small">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_11_561)">
-                    <path
-                      d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
-                      fill="#3179DF"
-                    />
-                    <path
-                      d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
-                      fill="#3179DF"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_11_561">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
 
-                <span>Стоимость: 170 200 рублей</span> (на дату 20.03.2023)
+            </div>
+            <div class="types__right">
+              <div class="types__body types-body">
+                <span class="types-body__theme">Пример отгрузки</span>
+                <div class="types-body__header">
+                  <span class="types-body__title title5">
+                    Теплообменник SN14-10 для охлаждения сусла, г. Волгодонск
+                  </span>
+
+                  <div class="types-body__video" data-video-src="https://www.youtube.com/embed/SYOeVVa1CGA">
+                    <img src="./img/types/posters/04.webp" alt="" />
+                  </div>
+                </div>
+                <div class="types-body__content">
+                  <div class="types-body__wrapper">
+                    <div class="types-body__desc text">
+                      Этот тип теплообменников должен быть изготовлен в "пищевом исполнении". В нашем аппарате
+                      используются теплообменные пластины из нерж. стали AISI316 и патрубки из нерж. стали AISI304. Наш
+                      заказчик обозначил технические параметры, которыми должен обладать теплообменник:
+                      <ol>
+                        <li>Объем охлаждаемого сусла - 1200 литров за 1 час</li>
+                        <li>Охлаждение сусла идет с 98С до 20С</li>
+                        <li>Охладителем является вода, с температурой - 15С</li>
+                      </ol>
+                      <strong>Сборка теплообменника заняла 1 день. Доставили оборудование транспортной компанией в г.
+                        Волгодонск за 3 дня.</strong>
+                    </div>
+                    <div class="types-body__price text text--small">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_11_561)">
+                          <path
+                            d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
+                            fill="#3179DF" />
+                          <path
+                            d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
+                            fill="#3179DF" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_11_561">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                      <span>Стоимость: 83 000 рублей</span> (на дату 27.02.2023 г.)
+                    </div>
+                  </div>
+                </div>
+                <div class="types-body__more">
+                  Подробнее
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L6 6L11 1" stroke="#3179DF" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="types-body__more">
-            Подробнее
-            <svg
-              width="12"
-              height="8"
-              viewBox="0 0 12 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1L6 6L11 1"
-                stroke="#3179DF"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="types__content" data-tab-content="soldered">
-      <div class="types__left">
-        <span class="types__capture title5">
-          Теплообменник для системы отопления
-        </span>
-        <p class="types__desc text text--small">
-          Задача этого теплообменника передать тепло от источника тепла (котел,
-          тепловые сети) к потребителям тепла (батареи, воздушное отопление и
-          т.д.). Контур источника тепла и контур потребителя тепла гидравлически
-          разделены - теплоносители не смешиваются. Вы сможете использовать в
-          качестве рабочих сред воду и гликольные смеси.
-        </p>
-        <div class="types__image">
-          <picture>
-            <source
-              srcset="./img/types/01-2x.webp"
-              type="image/webp"
-              media="(min-width: 1440px)"
-            />
-            <source srcset="./img/types/01-2x.webp" type="image/webp" />
-            <img
-              src="./img/types/01.png"
-              srcset="./img/types/01-2x.png 2x"
-              alt=""
-            />
-          </picture>
-        </div>
-
-
-      </div>
-      <div class="types__right">
-        <div class="types__body types-body">
-          <span class="types-body__theme">Пример отгрузки</span>
-          <div class="types-body__header">
-            <span class="types-body__title title5">
-              Теплообменник SN19-31-580 кВт для системы ГВС для жилого дома,
-              г. Невинномысск
-            </span>
-
-            <div class="types-body__video">
-              <img src="./img/types/cover.jpg" alt="" />
-            </div>
-          </div>
-          <div class="types-body__content">
-            <div class="types-body__wrapper">
-              <div class="types-body__desc text">
-                К нам обратился представитель управляющей
-                компании из г. Невинномысска и поставил задачу посчитать и
-                изготовить теплообменник для подогрева горячей воды
-                в многоквартирном жилом доме. Для подбора теплообменного
-                аппарата наш инженер уточнил данные для расчета, а именно:
-                <ol>
-                  <li>Расход ГВС в час пик - 9т/ч.</li>
-                  <li>Температуру греющего теплоносителя - 70/40С</li>
-                  <li>Температура нагреваемой воды 5/60</li>
-                </ol>
-                Теплообменник мощностью 580 кВт, расход 9,05 т/ч, количество
-                пластин 31 шт. был собран за 1 день.
+        <div class="swiper-slide">
+          <div class="types__content" data-tab-content="waterpool">
+            <div class="types__left">
+              <span class="types__capture title5">
+                Теплообменник для нагрева воды в бассейне
+              </span>
+              <p class="types__desc text text--small">
+                Температура воды в бассейне должна поддерживаться в пределах 25С-28С. Для этого устанавливают систему
+                нагрева воды. Теплообменник в этой системе передает тепло от источника тепла к воде из бассейна. Эти
+                теплообменники изготавливаются с нержавеющими и титановыми пластинами (для морской воды).
+              </p>
+              <div class="types__image">
+                <picture>
+                  <source srcset="./img/types/05-2x.webp" type="image/webp" media="(min-width: 1440px)" />
+                  <source srcset="./img/types/05-2x.webp" type="image/webp" />
+                  <img src="./img/types/05.png" srcset="./img/types/05-2x.png 2x" alt="" />
+                </picture>
               </div>
 
-              <div class="types-body__price text text--small">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_11_561)">
-                    <path
-                      d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
-                      fill="#3179DF"
-                    />
-                    <path
-                      d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
-                      fill="#3179DF"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_11_561">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
 
-                <span>Стоимость: 170 200 рублей</span> (на дату 20.03.2023)
+            </div>
+            <div class="types__right">
+              <div class="types__body types-body">
+                <span class="types-body__theme">Пример отгрузки</span>
+                <div class="types-body__header">
+                  <span class="types-body__title title5">
+                    Теплообменник SN04-20, 20 кВт для бассейна, г. Сарапул
+                  </span>
+
+                  <div class="types-body__video" data-video-src="https://www.youtube.com/embed/HUjD_Ze_XyY">
+                    <img src="./img/types/posters/05.webp" alt="" />
+                  </div>
+                </div>
+                <div class="types-body__content">
+                  <div class="types-body__wrapper">
+                    <div class="types-body__desc text">
+                      К нам обратился заказчик из г. Сарапул с целью подобрать теплообменник для уличного бассейна
+                      объемом 19 метров кубических. Наш инженер уточнил производительность котла и необходимую
+                      температуру воды в бассейне, после чего сделал расчет. Получился теплообменник со следующими
+                      параметрами:
+                      <ol>
+                        <li>Мощность - 20 кВт</li>
+                        <li>Температура греющего теплоносителя - 70 градусов</li>
+                        <li>Температура воды в бассейне - 29 градусов</li>
+                      </ol>
+                      <strong>Теплообменник был собран за 1 день и отправлен транспортной компанией заказчику в г.
+                        Сарапул.</strong>
+                    </div>
+
+                    <div class="types-body__price text text--small">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_11_561)">
+                          <path
+                            d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
+                            fill="#3179DF" />
+                          <path
+                            d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
+                            fill="#3179DF" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_11_561">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                      <span>Стоимость: 44 900 рублей</span> (на дату 26.10.2022 г.)
+                    </div>
+                  </div>
+                </div>
+                <div class="types-body__more">
+                  Подробнее
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L6 6L11 1" stroke="#3179DF" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="types-body__more">
-            Подробнее
-            <svg
-              width="12"
-              height="8"
-              viewBox="0 0 12 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1L6 6L11 1"
-                stroke="#3179DF"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="types__content" data-tab-content="waterpool">
-      <div class="types__left">
-        <span class="types__capture title5">
-          Теплообменник для системы отопления
-        </span>
-        <p class="types__desc text text--small">
-          Задача этого теплообменника передать тепло от источника тепла (котел,
-          тепловые сети) к потребителям тепла (батареи, воздушное отопление и
-          т.д.). Контур источника тепла и контур потребителя тепла гидравлически
-          разделены - теплоносители не смешиваются. Вы сможете использовать в
-          качестве рабочих сред воду и гликольные смеси.
-        </p>
-        <div class="types__image">
-          <picture>
-            <source
-              srcset="./img/types/01-2x.webp"
-              type="image/webp"
-              media="(min-width: 1440px)"
-            />
-            <source srcset="./img/types/01-2x.webp" type="image/webp" />
-            <img
-              src="./img/types/01.png"
-              srcset="./img/types/01-2x.png 2x"
-              alt=""
-            />
-          </picture>
-        </div>
-
-
-      </div>
-      <div class="types__right">
-        <div class="types__body types-body">
-          <span class="types-body__theme">Пример отгрузки</span>
-          <div class="types-body__header">
-            <span class="types-body__title title5">
-              Теплообменник SN19-31-580 кВт для системы ГВС для жилого дома,
-              г. Невинномысск
-            </span>
-
-            <div class="types-body__video">
-              <img src="./img/types/cover.jpg" alt="" />
-            </div>
-          </div>
-          <div class="types-body__content">
-            <div class="types-body__wrapper">
-              <div class="types-body__desc text">
-                К нам обратился представитель управляющей
-                компании из г. Невинномысска и поставил задачу посчитать и
-                изготовить теплообменник для подогрева горячей воды
-                в многоквартирном жилом доме. Для подбора теплообменного
-                аппарата наш инженер уточнил данные для расчета, а именно:
-                <ol>
-                  <li>Расход ГВС в час пик - 9т/ч.</li>
-                  <li>Температуру греющего теплоносителя - 70/40С</li>
-                  <li>Температура нагреваемой воды 5/60</li>
-                </ol>
-                Теплообменник мощностью 580 кВт, расход 9,05 т/ч, количество
-                пластин 31 шт. был собран за 1 день.
+        <div class="swiper-slide">
+          <div class="types__content" data-tab-content="soldered">
+            <div class="types__left">
+              <span class="types__capture title5">
+                Теплообменник для промышленной отрасли
+              </span>
+              <p class="types__desc text text--small">
+                Вам необходимо нестандартное решение? У нас огромный опыт решения подобных задач. Мы рассчитывали и
+                изготавливали теплообменники для нагрева кислот, майнинга (охлаждение видеокарт), охлаждения термальных
+                вод, нагрева нефтепродуктов и т.д. Расчеты нестандартных теплообменников проходят проверку главного
+                инженера.
+              </p>
+              <div class="types__image">
+                <picture>
+                  <source srcset="./img/types/06-2x.webp" type="image/webp" media="(min-width: 1440px)" />
+                  <source srcset="./img/types/06-2x.webp" type="image/webp" />
+                  <img src="./img/types/06.png" srcset="./img/types/06-2x.png 2x" alt="" />
+                </picture>
               </div>
 
-              <div class="types-body__price text text--small">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_11_561)">
-                    <path
-                      d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
-                      fill="#3179DF"
-                    />
-                    <path
-                      d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
-                      fill="#3179DF"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_11_561">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
 
-                <span>Стоимость: 170 200 рублей</span> (на дату 20.03.2023)
+            </div>
+            <div class="types__right">
+              <div class="types__body types-body">
+                <span class="types-body__theme">Пример отгрузки</span>
+                <div class="types-body__header">
+                  <span class="types-body__title title5">
+                    Теплообменник SN07-28, 150 кВт для подогрева жидкого бетона, г. Волжский
+                  </span>
+                  <div class="types-body__video" data-video-src="https://www.youtube.com/embed/cHWtPKbcej8">
+                    <img src="./img/types/posters/06.webp" alt="" />
+                  </div>
+                </div>
+                <div class="types-body__content">
+                  <div class="types-body__wrapper">
+                    <div class="types-body__desc text">
+                      К нам обратился клиент из г. Волжский (Волгоградской обл.) с просьбой подобрать теплообменник для
+                      поддержания постоянной температуры жидкого бетона на производстве (бетонный завод). Наш инженер
+                      уточнил данные для расчета, а именно:
+                      <ol>
+                        <li>Температура греющего теплоносителя - 70/50 С</li>
+                        <li>Температура нагреваемого теплоносителя (вода) - 24/30 С</li>
+                        <li>Массовый расход нагреваемого контура 21,52 т/ч.</li>
+                      </ol>
+                      <strong>Теплообменник был собран за 1 день и отправлен транспортной компанией заказчику в г.
+                        Волжский.</strong>
+                    </div>
+
+                    <div class="types-body__price text text--small">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_11_561)">
+                          <path
+                            d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
+                            fill="#3179DF" />
+                          <path
+                            d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
+                            fill="#3179DF" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_11_561">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                      <span>Стоимость: 84 400 рублей</span> (на дату 26.01.2023 г.)
+                    </div>
+                  </div>
+                </div>
+                <div class="types-body__more">
+                  Подробнее
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L6 6L11 1" stroke="#3179DF" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="types-body__more">
-            Подробнее
-            <svg
-              width="12"
-              height="8"
-              viewBox="0 0 12 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1L6 6L11 1"
-                stroke="#3179DF"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="types__content" data-tab-content="steam">
-      <div class="types__left">
-        <span class="types__capture title5">
-          Теплообменник для системы отопления
-        </span>
-        <p class="types__desc text text--small">
-          Задача этого теплообменника передать тепло от источника тепла (котел,
-          тепловые сети) к потребителям тепла (батареи, воздушное отопление и
-          т.д.). Контур источника тепла и контур потребителя тепла гидравлически
-          разделены - теплоносители не смешиваются. Вы сможете использовать в
-          качестве рабочих сред воду и гликольные смеси.
-        </p>
-        <div class="types__image">
-          <picture>
-            <source
-              srcset="./img/types/01-2x.webp"
-              type="image/webp"
-              media="(min-width: 1440px)"
-            />
-            <source srcset="./img/types/01-2x.webp" type="image/webp" />
-            <img
-              src="./img/types/01.png"
-              srcset="./img/types/01-2x.png 2x"
-              alt=""
-            />
-          </picture>
-        </div>
-
-
-      </div>
-      <div class="types__right">
-        <div class="types__body types-body">
-          <span class="types-body__theme">Пример отгрузки</span>
-          <div class="types-body__header">
-            <span class="types-body__title title5">
-              Теплообменник SN19-31-580 кВт для системы ГВС для жилого дома,
-              г. Невинномысск
-            </span>
-
-            <div class="types-body__video">
-              <img src="./img/types/cover.jpg" alt="" />
-            </div>
-          </div>
-          <div class="types-body__content">
-            <div class="types-body__wrapper">
-              <div class="types-body__desc text">
-                К нам обратился представитель управляющей
-                компании из г. Невинномысска и поставил задачу посчитать и
-                изготовить теплообменник для подогрева горячей воды
-                в многоквартирном жилом доме. Для подбора теплообменного
-                аппарата наш инженер уточнил данные для расчета, а именно:
-                <ol>
-                  <li>Расход ГВС в час пик - 9т/ч.</li>
-                  <li>Температуру греющего теплоносителя - 70/40С</li>
-                  <li>Температура нагреваемой воды 5/60</li>
-                </ol>
-                Теплообменник мощностью 580 кВт, расход 9,05 т/ч, количество
-                пластин 31 шт. был собран за 1 день.
+        <div class="swiper-slide">
+          <div class="types__content" data-tab-content="steam">
+            <div class="types__left">
+              <span class="types__capture title5">
+                Теплообменник для системы вентиляции
+              </span>
+              <p class="types__desc text text--small">
+                Задача теплообменника - нагревать теплоноситель, который подается в систему подогрева наружного воздуха.
+                В этой системе есть источник тепла (котел), который подает греющий теплоноситель в пластинчатый
+                теплообменник, где происходит нагрев второго (внутреннего) теплоносителя. Далее внутренний теплоноситель
+                поступает в установку подогрева наружного воздуха.
+              </p>
+              <div class="types__image">
+                <picture>
+                  <source srcset="./img/types/07-2x.webp" type="image/webp" media="(min-width: 1440px)" />
+                  <source srcset="./img/types/07-2x.webp" type="image/webp" />
+                  <img src="./img/types/07.png" srcset="./img/types/07-2x.png 2x" alt="" />
+                </picture>
               </div>
 
-              <div class="types-body__price text text--small">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_11_561)">
-                    <path
-                      d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
-                      fill="#3179DF"
-                    />
-                    <path
-                      d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
-                      fill="#3179DF"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_11_561">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
 
-                <span>Стоимость: 170 200 рублей</span> (на дату 20.03.2023)
+            </div>
+            <div class="types__right">
+              <div class="types__body types-body">
+                <span class="types-body__theme">Пример отгрузки</span>
+                <div class="types-body__header">
+                  <span class="types-body__title title5">
+                    Теплообменник SN14-20, 183 кВт для системы вентиляции, г. Уфа
+                  </span>
+                  <div class="types-body__video" data-video-src="https://www.youtube.com/embed/j0VuKicw2DE">
+                    <img src="./img/types/posters/07.webp" alt="" />
+                  </div>
+                </div>
+                <div class="types-body__content">
+                  <div class="types-body__wrapper">
+                    <div class="types-body__desc text">
+                      К нам обратился заказчик из г. Уфа. Для него мы изготовили пластинчатый теплообменник для системы
+                      вентиляции. Теплообменный аппарат обладает следующими характеристиками:
+                      <ol>
+                        <li>Мощность - 183 кВт</li>
+                        <li>Греющий теплоноситель (вода). Вход: 80С, Выход: 60С</li>
+                        <li>Нагреваемый теплоноситель проп. гликоль 30% (или вода). Его нагреваем с 40С до 70С.
+                          Теплоноситель 70С поступает в систему вентиляции на фанкойлы.</li>
+                      </ol>
+                      <strong>Сборка теплообменника из 20 пластин заняла 1 день. Оборудование отправили ТК в г. Уфа,
+                        доставка заняла 3 дня.</strong>
+                    </div>
+
+                    <div class="types-body__price text text--small">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_11_561)">
+                          <path
+                            d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
+                            fill="#3179DF" />
+                          <path
+                            d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
+                            fill="#3179DF" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_11_561">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                      <span>Стоимость: N рублей</span> (на дату 02.02.2024 г.)
+                    </div>
+                  </div>
+                </div>
+                <div class="types-body__more">
+                  Подробнее
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L6 6L11 1" stroke="#3179DF" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="types-body__more">
-            Подробнее
-            <svg
-              width="12"
-              height="8"
-              viewBox="0 0 12 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1L6 6L11 1"
-                stroke="#3179DF"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="types__content" data-tab-content="service">
-      <div class="types__left">
-        <span class="types__capture title5">
-          Теплообменник для системы отопления
-        </span>
-        <p class="types__desc text text--small">
-          Задача этого теплообменника передать тепло от источника тепла (котел,
-          тепловые сети) к потребителям тепла (батареи, воздушное отопление и
-          т.д.). Контур источника тепла и контур потребителя тепла гидравлически
-          разделены - теплоносители не смешиваются. Вы сможете использовать в
-          качестве рабочих сред воду и гликольные смеси.
-        </p>
-        <div class="types__image">
-          <picture>
-            <source
-              srcset="./img/types/01-2x.webp"
-              type="image/webp"
-              media="(min-width: 1440px)"
-            />
-            <source srcset="./img/types/01-2x.webp" type="image/webp" />
-            <img
-              src="./img/types/01.png"
-              srcset="./img/types/01-2x.png 2x"
-              alt=""
-            />
-          </picture>
-        </div>
-
-
-      </div>
-      <div class="types__right">
-        <div class="types__body types-body">
-          <span class="types-body__theme">Пример отгрузки</span>
-          <div class="types-body__header">
-            <span class="types-body__title title5">
-              Теплообменник SN19-31-580 кВт для системы ГВС для жилого дома,
-              г. Невинномысск
-            </span>
-
-            <div class="types-body__video">
-              <img src="./img/types/cover.jpg" alt="" />
-            </div>
-          </div>
-          <div class="types-body__content">
-            <div class="types-body__wrapper">
-              <div class="types-body__desc text">
-                К нам обратился представитель управляющей
-                компании из г. Невинномысска и поставил задачу посчитать и
-                изготовить теплообменник для подогрева горячей воды
-                в многоквартирном жилом доме. Для подбора теплообменного
-                аппарата наш инженер уточнил данные для расчета, а именно:
-                <ol>
-                  <li>Расход ГВС в час пик - 9т/ч.</li>
-                  <li>Температуру греющего теплоносителя - 70/40С</li>
-                  <li>Температура нагреваемой воды 5/60</li>
-                </ol>
-                Теплообменник мощностью 580 кВт, расход 9,05 т/ч, количество
-                пластин 31 шт. был собран за 1 день.
+        <div class="swiper-slide">
+          <div class="types__content" data-tab-content="service">
+            <div class="types__left">
+              <span class="types__capture title5">
+                Теплообменник для имерсионной жидкости
+              </span>
+              <p class="types__desc text text--small">
+                В процессе жидкостного охлаждения, ASIC-устройства располагаются в специальных контейнерах, наполненных
+                диэлектрической жидкостью. Эта жидкость непрерывно перемещается между асиками и теплообменником, где
+                охлаждается, а затем вновь возвращается в контейнер с ASIC-ами.
+              </p>
+              <div class="types__image">
+                <picture>
+                  <source srcset="./img/types/08-2x.webp" type="image/webp" media="(min-width: 1440px)" />
+                  <source srcset="./img/types/08-2x.webp" type="image/webp" />
+                  <img src="./img/types/08.png" srcset="./img/types/08-2x.png 2x" alt="" />
+                </picture>
               </div>
 
-              <div class="types-body__price text text--small">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_11_561)">
-                    <path
-                      d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
-                      fill="#3179DF"
-                    />
-                    <path
-                      d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
-                      fill="#3179DF"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_11_561">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
 
-                <span>Стоимость: 170 200 рублей</span> (на дату 20.03.2023)
+            </div>
+            <div class="types__right">
+              <div class="types__body types-body">
+                <span class="types-body__theme">Пример отгрузки</span>
+                <div class="types-body__header">
+                  <span class="types-body__title title5">
+                    Теплообменник SN08-51, 70 кВт для майнинга, г. Оренбург
+                  </span>
+
+                  <div class="types-body__video" data-video-src="https://www.youtube.com/embed/B_vQ3bfItvo">
+                    <img src="./img/types/posters/08.webp" alt="" />
+                  </div>
+                </div>
+                <div class="types-body__content">
+                  <div class="types-body__wrapper">
+                    <div class="types-body__desc text">
+                      К нам обратился заказчик из г. Оренбурга.  Поставил задачу - подобрать теплообменник для системы
+                      охлаждения иммерсионной жидкости майнинг фермы. Нагретый охладитель будет подключен к системе
+                      теплого пола. Заказчик предоставил параметры, которыми должен обладать аппарат:
+                      <ol>
+                        <li>Мощность - 70 кВт</li>
+                        <li>Иммерсионную жидкость охлаждает с 65С до 35 С</li>
+                        <li>Охладителем является вода, с температурой 12С (на выходе вода нагревается до 40 С)</li>
+                      </ol>
+                      <strong>Теплообменник собрали и  отгрузили за 1 день. Доставили товар в г. Оренбург транспортной
+                        компанией за 8 дней.</strong>
+                    </div>
+
+                    <div class="types-body__price text text--small">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_11_561)">
+                          <path
+                            d="M11.2513 6.65009H9.15271V9.17886H11.2513C11.9485 9.17886 12.5157 8.61165 12.5157 7.91449C12.5157 7.21734 11.9485 6.65009 11.2513 6.65009Z"
+                            fill="#3179DF" />
+                          <path
+                            d="M17.0696 2.93063C13.1625 -0.976422 6.83828 -0.977009 2.93068 2.93063C-0.976417 6.83765 -0.977043 13.162 2.93068 17.0696C6.83773 20.9766 13.162 20.9772 17.0696 17.0696C20.9766 13.1625 20.9772 6.83824 17.0696 2.93063ZM11.2514 10.8213H9.1528V11.6816H10.8343C11.2878 11.6816 11.6555 12.0492 11.6555 12.5028C11.6555 12.9563 11.2878 13.324 10.8343 13.324H9.1528V14.1712C9.1528 14.6248 8.78514 14.9924 8.33161 14.9924C7.87807 14.9924 7.51041 14.6248 7.51041 14.1712V13.324H6.66317C6.20964 13.324 5.84198 12.9563 5.84198 12.5028C5.84198 12.0492 6.20964 11.6816 6.66317 11.6816H7.51041V10.8213H6.66317C6.20964 10.8213 5.84198 10.4536 5.84198 10.0001C5.84198 9.54654 6.20964 9.17888 6.66317 9.17888H7.51041V5.82891C7.51041 5.37537 7.87807 5.00771 8.33161 5.00771H11.2514C12.8542 5.00771 14.1582 6.31169 14.1582 7.91447C14.1582 9.51733 12.8542 10.8213 11.2514 10.8213Z"
+                            fill="#3179DF" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_11_561">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                      <span>Стоимость: 115 400 рублей</span> (на дату 15.04.2024 г.)
+                    </div>
+                  </div>
+                </div>
+                <div class="types-body__more">
+                  Подробнее
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L6 6L11 1" stroke="#3179DF" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="types-body__more">
-            Подробнее
-            <svg
-              width="12"
-              height="8"
-              viewBox="0 0 12 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1L6 6L11 1"
-                stroke="#3179DF"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
           </div>
         </div>
       </div>
@@ -899,77 +671,37 @@
         <ul class="list-reset clients__list">
           <li class="clients__item">
             <picture>
-              <source
-                srcset="./img/clients/01-2x.webp"
-                type="image/webp"
-                media="(min-width: 1440px)"
-              />
+              <source srcset="./img/clients/01-2x.webp" type="image/webp" media="(min-width: 1440px)" />
               <source srcset="./img/clients/01.webp" type="image/webp" />
-              <img
-                src="./img/clients/01.png"
-                srcset="./img/clients/01-2x.png 2x"
-                alt=""
-              />
+              <img src="./img/clients/01.png" srcset="./img/clients/01-2x.png 2x" alt="" />
             </picture>
           </li>
           <li class="clients__item">
             <picture>
-              <source
-                srcset="./img/clients/02-2x.webp"
-                type="image/webp"
-                media="(min-width: 1440px)"
-              />
+              <source srcset="./img/clients/02-2x.webp" type="image/webp" media="(min-width: 1440px)" />
               <source srcset="./img/clients/02.webp" type="image/webp" />
-              <img
-                src="./img/clients/02.png"
-                srcset="./img/clients/02-2x.png 2x"
-                alt=""
-              />
+              <img src="./img/clients/02.png" srcset="./img/clients/02-2x.png 2x" alt="" />
             </picture>
           </li>
           <li class="clients__item">
             <picture>
-              <source
-                srcset="./img/clients/03-2x.webp"
-                type="image/webp"
-                media="(min-width: 1440px)"
-              />
+              <source srcset="./img/clients/03-2x.webp" type="image/webp" media="(min-width: 1440px)" />
               <source srcset="./img/clients/03.webp" type="image/webp" />
-              <img
-                src="./img/clients/03.png"
-                srcset="./img/clients/03-2x.png 2x"
-                alt=""
-              />
+              <img src="./img/clients/03.png" srcset="./img/clients/03-2x.png 2x" alt="" />
             </picture>
           </li>
           <li class="clients__item">
             <picture>
-              <source
-                srcset="./img/clients/04-2x.webp"
-                type="image/webp"
-                media="(min-width: 1440px)"
-              />
+              <source srcset="./img/clients/04-2x.webp" type="image/webp" media="(min-width: 1440px)" />
               <source srcset="./img/clients/04.webp" type="image/webp" />
-              <img
-                src="./img/clients/04.png"
-                srcset="./img/clients/04-2x.png 2x"
-                alt=""
-              />
+              <img src="./img/clients/04.png" srcset="./img/clients/04-2x.png 2x" alt="" />
             </picture>
           </li>
           <li class="clients__item">
             <picture>
-              <source
-                srcset="./img/clients/05-2x.webp"
-                type="image/webp"
-                media="(min-width: 1440px)"
-              />
+              <source srcset="./img/clients/05-2x.webp" type="image/webp" media="(min-width: 1440px)" />
               <source srcset="./img/clients/05.webp" type="image/webp" />
-              <img
-                src="./img/clients/05.png"
-                srcset="./img/clients/05-2x.png 2x"
-                alt=""
-              />
+              <img src="./img/clients/05.png" srcset="./img/clients/05-2x.png 2x" alt="" />
             </picture>
           </li>
         </ul>
@@ -978,30 +710,12 @@
   </div>
 
   <div class="types__shadow">
-    <svg
-      width="1570"
-      height="67"
-      viewBox="0 0 1570 67"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <ellipse
-        cx="785"
-        cy="38.4022"
-        rx="785"
-        ry="28.4276"
-        fill="url(#paint0_radial_11_526)"
-      />
+    <svg width="1570" height="67" viewBox="0 0 1570 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="785" cy="38.4022" rx="785" ry="28.4276" fill="url(#paint0_radial_11_526)" />
       <rect x="67.1483" width="1435.08" height="41.8933" fill="white" />
       <defs>
-        <radialGradient
-          id="paint0_radial_11_526"
-          cx="0"
-          cy="0"
-          r="1"
-          gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(785 38.4022) rotate(90) scale(28.4276 785)"
-        >
+        <radialGradient id="paint0_radial_11_526" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+          gradientTransform="translate(785 38.4022) rotate(90) scale(28.4276 785)">
           <stop stop-color="#1B2D64" stop-opacity="0.1" />
           <stop offset="1" stop-color="#2D3241" stop-opacity="0" />
         </radialGradient>
