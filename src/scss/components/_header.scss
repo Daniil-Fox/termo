@@ -38,6 +38,31 @@
       gap: 8px;
       font-size: 15px;
     }
+
+    span {
+      display: inline-block;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 10%;
+        opacity: 0;
+        height: 1px;
+        background-color: currentColor;
+
+        transition: .3s ease-out;
+      }
+    }
+
+    @include hover {
+      span::after {
+        opacity: 1;
+        width: 100%;
+      }
+    }
   }
 
   &__burger {
