@@ -7,11 +7,20 @@
   align-items: center;
   gap: 3rem;
 
+  @include small-tablet {
+    padding: 25px 20px;
+    border-radius: 30px;
+  }
+
   &__img {
     width: 9.4rem;
     height: 9.4rem;
     position: relative;
     flex-shrink: 0;
+
+    @include mobile {
+      display: none;
+    }
 
     img {
       display: block;
@@ -39,6 +48,10 @@
     margin-bottom: 1.5rem;
     color: #fff;
     font-weight: 700;
+
+    @include small-tablet {
+      margin-bottom: 13px;
+    }
   }
 
   &__link {
@@ -49,6 +62,10 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #3179df;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
   }
 
 

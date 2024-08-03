@@ -7,12 +7,23 @@
   align-items: center;
   gap: 2.5rem;
 
+  @include small-tablet {
+    padding: 20px 14px;
+    border-radius: 20px;
+    gap: 14px;
+  }
+
   &__image {
     width: 11.5rem;
     height: 11.5rem;
     border-radius: 100%;
     flex-shrink: 0;
     position: relative;
+
+    @include small-tablet {
+      width: 90px;
+      height: 90px;
+    }
 
     img {
       display: block;
@@ -32,6 +43,13 @@
       border: 3px solid #fff;
       border-radius: 100%;
       background-color: #64D05D;
+
+      @include small-tablet {
+        width: 18px;
+        height: 18px;
+        bottom: 5px;
+        right: 5px;
+      }
     }
   }
 
@@ -42,6 +60,11 @@
     font-size: 1.8rem;
     line-height: 130%;
     color: #2d3241;
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
   }
 
   &__prof {
@@ -50,5 +73,9 @@
     font-size: 1.6rem;
     line-height: 130%;
     color: #606778;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
   }
 }

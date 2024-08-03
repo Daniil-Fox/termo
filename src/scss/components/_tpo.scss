@@ -1,21 +1,61 @@
 .tpo {
   margin-top: 14rem;
   margin-bottom: 7rem;
-  &__container {
-    display: flex;
-    align-items: center;
-    gap: 7rem;
 
-    margin-bottom: 6rem;
+  @include tablet {
+    margin-top: 8rem;
   }
 
-  &__content, &__right {
-    flex: 1;
+  @include small-tablet {
+    margin-top: 65px;
   }
+
+  .container {
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    display: inline-block;
+    width: 100%;
+    max-width: 52rem;
+
+    @include tablet {
+      max-width: 43rem;
+    }
+
+    @include small-tablet {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &__gif {
+    display: inline-block;
+    width: 100%;
+    max-width: 57.4rem;
+    margin-left: 5rem;
+
+    @include tablet {
+      max-width: 46.4rem;
+    }
+
+    @include small-tablet {
+      display: block;
+      margin-left: 0;
+      max-width: 100%;
+      order: 5;
+      margin-top: 35px;
+    }
+  }
+
   &__title {
     margin-bottom: 2rem;
     text-align: left;
   }
+
   &__desc {
     text-align: left;
   }
@@ -29,7 +69,23 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @include tablet {
+      height: 36rem;
+      padding: 3rem;
+      border-radius: 30px;
+    }
+
+    @include small-tablet {
+      height: 260px;
+      padding: 27px 20px;
+    }
+
+    @include mobile {
+      height: 215px;
+    }
   }
+
   &__icon {
     position: absolute;
     z-index: 2;
@@ -38,11 +94,19 @@
     top: 4.5rem;
     right: 4rem;
 
+    @include tablet {
+      width: 70px;
+      height: 65px;
+      top: 20px;
+      right: 20px;
+    }
+
     img {
       width: 100%;
       height: 100%;
     }
   }
+
   &__image {
     position: absolute;
     left: 0;
@@ -50,11 +114,13 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+
     img {
       display: block;
       width: 100%;
       height: 100%;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -65,11 +131,25 @@
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000 100%);
     }
   }
+
   &__achiev {
     font-weight: 700;
     font-size: 3rem;
     line-height: 130%;
     color: #fff;
+
+    @include tablet {
+      font-size: 2.4rem;
+    }
+
+    @include small-tablet {
+      font-size: 2rem;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
+
     span {
       display: block;
       color: #fbcd5d;
@@ -78,13 +158,40 @@
 
 
   &__list {
+    margin-top: 6.5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem 7rem;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.6rem 7rem;
+    align-items: center;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+      grid-template-rows: unset;
+      margin-top: 32px;
+      gap: 20px;
+    }
   }
+
   &__item {
     font-size: 2.2rem;
     display: flex;
     align-items: center;
+
+    @include tablet {
+      font-size: 1.8rem;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin: 0;
+    }
   }
 }

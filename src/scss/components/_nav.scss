@@ -6,9 +6,13 @@
   }
 
   &__link {
-    font-family: var(--second-family);
+    font-family: var(--font-family);
     font-weight: 500;
     font-size: 1.5rem;
     color: #2d3241;
+
+    @include small-tablet {
+      font-size: 15px;
+    }
   }
 }

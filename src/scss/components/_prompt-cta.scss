@@ -1,9 +1,18 @@
 .prompt-cta {
   margin-top: -10rem;
 
+  @include small-tablet {
+    margin-top: -100px;
+  }
+
   &__container {
     background-image: url("./../img/drawing-2x.webp"),
-        linear-gradient(24deg, #ecf3fb 0%, #c2d4e9 100%);
+      linear-gradient(24deg, #ecf3fb 0%, #c2d4e9 100%);
     background-size: 68.9rem 100%, cover;
+
+    @include small-tablet {
+      background-image: linear-gradient(24deg, #ecf3fb 0%, #c2d4e9 100%);
+      background-size: cover;
+    }
   }
 }

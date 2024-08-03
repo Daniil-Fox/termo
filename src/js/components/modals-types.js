@@ -1,4 +1,4 @@
-const typesVideo = document.querySelectorAll('.types-body__video')
+const typesVideo = document.querySelectorAll('[data-video-src]')
 const modalVideo = document.querySelector('.modal-video')
 typesVideo.forEach(vcont => {
   vcont.addEventListener('click', e => {

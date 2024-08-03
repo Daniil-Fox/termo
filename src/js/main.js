@@ -24,17 +24,25 @@ menuBurger.addEventListener("click", (e) => {
 });
 
 
-const vidgets = document.querySelector('.vidgets')
+window.addEventListener('DOMContentLoaded', e => {
+  const vidgets = document.querySelector('.vidgets')
+  const vidgetsBody = vidgets.querySelector('.vidgets__body')
+  setTimeout(() => {
+    vidgets.style.transform = 'translate(0, -50%)';
+  }, 1000)
+  setTimeout(() => {
+    vidgets.classList.remove('hide')
+    vidgetsBody.style.maxHeight = vidgetsBody.scrollHeight + 'px';
+  }, 1500)
+  if(vidgets){
+    const vidgetsClose = vidgets.querySelector('.vidgets__close')
 
-if(vidgets){
-  const vidgetsClose = vidgets.querySelector('.vidgets__close')
+    vidgetsClose.addEventListener('click', e => {
 
-  vidgetsClose.addEventListener('click', e => {
-    e.preventDefault()
+      e.preventDefault()
 
-    vidgets.classList.add('hidden')
-    setTimeout(() => {
-      vidgets.remove();
-    }, 300)
-  })
-}
+      let isActive = vidgets.classList.toggle('hide')
+      vidgetsBody.style.maxHeight = isActive ? 0 : vidgetsBody.scrollHeight + 'px';
+    })
+  }
+})

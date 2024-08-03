@@ -29,8 +29,9 @@
 
     @include mobile {
       padding-top: 50px;
-      padding-bottom: 270px;
+      padding-bottom: 400px;
       background-size: 100% auto, cover;
+      background-position: right 80%, center;
     }
   }
 
@@ -52,7 +53,6 @@
     @include tablet {
       margin-top: -8rem;
       padding-top: 14rem;
-      padding-bottom: 10rem;
     }
 
     @include small-tablet {
@@ -73,10 +73,14 @@
 
     position: relative;
 
+    @include small-tablet {
+
+      margin-bottom: 44px;
+    }
+
     @include mobile {
       flex-direction: column;
       justify-content: flex-start;
-      margin-bottom: 44px;
     }
 
     &::before {

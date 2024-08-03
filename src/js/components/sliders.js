@@ -18,6 +18,14 @@ new Swiper(".video-r__slider", {
   },
   pagination: {
     el: '.swiper-pagination',
+  },
+  breakpoints: {
+    320 : {
+      slidesPerView: 'auto',
+    },
+    768: {
+      slidesPerView: 3,
+    }
   }
 });
 

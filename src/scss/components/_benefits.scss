@@ -131,7 +131,7 @@
     justify-content: center;
     width: 14rem;
     height: 4rem;
-    font-family: var(--second-family);
+    font-family: var(--font-family);
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 140%;
@@ -185,23 +185,28 @@
 
     @include small-tablet {
       padding: 24px 20px;
+      padding-top: 54px;
     }
   }
 
   &__title {
     margin-bottom: 2.2rem;
+
+    @include small-tablet {
+      margin-bottom: 25px;
+    }
   }
 
   &__btn {
     height: auto;
     width: 100%;
-    padding-top: 2.4rem;
-    padding-bottom: 1.4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     padding-left: 0;
     padding-right: 0;
 
     @include tablet {
-      padding-top: 1.5rem;
+      padding-top: 1rem;
       padding-bottom: 1rem;
       font-size: 1.4rem;
     }
@@ -209,6 +214,7 @@
     @include small-tablet {
       max-width: 30rem;
       margin: 0 auto;
+      font-size: 16px;
     }
   }
 }

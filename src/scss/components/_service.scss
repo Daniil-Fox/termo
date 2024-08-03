@@ -1,6 +1,14 @@
 .service {
   margin-bottom: 12rem;
 
+  @include tablet {
+    margin-bottom: 8rem;
+  }
+
+  @include small-tablet {
+    margin-bottom: 65px;
+  }
+
   &__title {
     margin-bottom: 2rem;
   }
@@ -13,6 +21,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
   }
 
   &__item {
@@ -31,10 +44,6 @@
               color: #3179df;
             }
           }
-        }
-
-        &__price {
-          color: #3179df;
         }
 
         &__block {
@@ -63,9 +72,6 @@
           }
         }
 
-        &__price {
-          color: #ce3c46;
-        }
 
         &__block {
           &::before {
@@ -86,6 +92,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include small-tablet {
+    padding: 20px;
+    padding-top: 47px;
+    border-radius: 30px;
+  }
 
   &::before {
     content: attr(data-count);
@@ -112,11 +124,22 @@
     text-transform: uppercase;
     text-align: center;
     color: #a1aecc;
+
+    @include small-tablet {
+      padding-top: 6px;
+      width: 105px;
+      height: 30px;
+      font-size: 14px;
+    }
   }
 
   &__title {
     text-align: center;
     margin-bottom: 3rem;
+
+    @include small-tablet {
+      margin-bottom: 14px;
+    }
   }
 
   &__about {
@@ -127,6 +150,11 @@
     border-radius: 3rem;
     display: flex;
     gap: 3rem;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+      padding: 12px;
+    }
   }
 
   &__text {
@@ -145,6 +173,16 @@
     height: 26.5rem;
     width: 19rem;
 
+    @include small-tablet {
+      width: 140px;
+      height: 221px;
+    }
+
+    @include mobile {
+      width: 80px;
+      height: 110px;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -157,10 +195,23 @@
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 130%;
+
+    @include tablet {
+      font-size: 2.2rem;
+    }
+
+    @include small-tablet {
+      font-size: 18px;
+      margin-bottom: 13px;
+    }
   }
 
   &__list {
     margin-bottom: 4rem;
+
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
 
     &>li {
       position: relative;
@@ -169,6 +220,11 @@
       font-size: 2.2rem;
       line-height: 130%;
       color: #2d3241;
+
+      @include small-tablet {
+        font-size: 16px;
+        padding-left: 17px;
+      }
 
       &:not(:last-child) {
         margin-bottom: 2rem;
@@ -187,6 +243,10 @@
         font-weight: 700;
         font-size: 22px;
         line-height: 130%;
+
+        @include small-tablet {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -195,11 +255,19 @@
     padding: 3.5rem 2.7rem;
     background-color: #fff;
     border-radius: 3rem;
-
+    position: relative;
     display: flex;
     align-items: center;
     gap: 2.3rem;
 
+    @include small-tablet {
+      border-radius: 20px;
+      padding: 26px 20px 22px;
+
+      display: flex;
+      justify-content: center;
+
+    }
 
     &::before {
       content: "";
@@ -213,10 +281,21 @@
       background-repeat: no-repeat;
       background-size: 1.6rem, cover;
       background-position: center;
+
+      @include small-tablet {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        background-size: 10px, cover;
+      }
     }
   }
 
   &__rubles {
+
 
     p,
     div {
@@ -225,6 +304,14 @@
       font-size: 2.2rem;
       line-height: 130%;
       color: #2d3241;
+
+      @include tablet {
+        font-size: 2rem;
+      }
+
+      @include small-tablet {
+        font-size: 16px;
+      }
     }
 
 

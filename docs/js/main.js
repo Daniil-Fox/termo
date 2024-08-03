@@ -96,7 +96,7 @@ if (dropdownContainer.length > 0) {
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-const typesVideo = document.querySelectorAll('.types-body__video');
+const typesVideo = document.querySelectorAll('[data-video-src]');
 const modalVideo = document.querySelector('.modal-video');
 typesVideo.forEach(vcont => {
   vcont.addEventListener('click', e => {
@@ -191,6 +191,14 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".video-r__slider", {
   },
   pagination: {
     el: '.swiper-pagination'
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 'auto'
+    },
+    768: {
+      slidesPerView: 3
+    }
   }
 });
 new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper('.types-content-slider', {
@@ -10708,17 +10716,25 @@ menuBurger.addEventListener("click", e => {
     }, 300);
   }
 });
-const vidgets = document.querySelector('.vidgets');
-if (vidgets) {
-  const vidgetsClose = vidgets.querySelector('.vidgets__close');
-  vidgetsClose.addEventListener('click', e => {
-    e.preventDefault();
-    vidgets.classList.add('hidden');
-    setTimeout(() => {
-      vidgets.remove();
-    }, 300);
-  });
-}
+window.addEventListener('DOMContentLoaded', e => {
+  const vidgets = document.querySelector('.vidgets');
+  const vidgetsBody = vidgets.querySelector('.vidgets__body');
+  setTimeout(() => {
+    vidgets.style.transform = 'translate(0, -50%)';
+  }, 1000);
+  setTimeout(() => {
+    vidgets.classList.remove('hide');
+    vidgetsBody.style.maxHeight = vidgetsBody.scrollHeight + 'px';
+  }, 1500);
+  if (vidgets) {
+    const vidgetsClose = vidgets.querySelector('.vidgets__close');
+    vidgetsClose.addEventListener('click', e => {
+      e.preventDefault();
+      let isActive = vidgets.classList.toggle('hide');
+      vidgetsBody.style.maxHeight = isActive ? 0 : vidgetsBody.scrollHeight + 'px';
+    });
+  }
+});
 /******/ })()
 ;
 //# sourceMappingURL=main.js.map

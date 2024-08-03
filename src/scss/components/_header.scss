@@ -26,18 +26,28 @@
     align-items: center;
     gap: 0.8rem;
 
-    font-family: var(--second-family);
+    font-family: var(--font-family);
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 1;
     color: var(--red-color);
 
     cursor: pointer;
+
+    @include small-tablet {
+      gap: 8px;
+      font-size: 15px;
+    }
   }
 
   &__burger {
     width: 1.8rem;
     height: 1.2rem;
+
+    @include small-tablet {
+      width: 18px;
+      height: 11px;
+    }
 
     svg {
       width: 100%;
@@ -120,6 +130,10 @@
     display: flex;
     align-items: center;
     gap: 3.5rem;
+
+    @include small-tablet {
+      gap: 35px;
+    }
   }
 
   &__soc {

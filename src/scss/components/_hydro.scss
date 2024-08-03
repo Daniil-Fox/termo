@@ -1,27 +1,57 @@
 .hydro {
   margin: 12rem 0;
+
+  @include small-tablet {
+    margin: 65px 0;
+  }
+
   &__title {
     margin-bottom: 2rem;
+
+    @include small-tablet {
+      margin-bottom: 16px;
+    }
   }
+
   &__header {
     margin-bottom: 5.7rem;
+
+    @include small-tablet {
+      margin-bottom: 34px;
+    }
   }
 }
 
 .hydro-item {
   &:not(:last-child) {
     margin-bottom: 4rem;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
   }
+
   &__body {
     padding: 3rem;
     border: 3px solid #e3eaf1;
     border-radius: 5rem;
+
+    @include small-tablet {
+      padding: 20px;
+      border-radius: 30px;
+    }
   }
 
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 2rem;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
   }
 
   &__img {
@@ -29,12 +59,23 @@
     height: auto;
     border-radius: 3rem;
     overflow: hidden;
+
+    @include small-tablet {
+      height: 320px;
+      border-radius: 15px;
+    }
+
+    @include mobile {
+      height: 160px;
+    }
+
     img {
       display: block;
       width: 100%;
       height: 100%;
     }
   }
+
   &__content {
     grid-column: 8 span;
     padding-left: 4rem;
@@ -42,6 +83,11 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 5rem;
+
+    @include small-tablet {
+      padding-left: 0;
+      gap: 30px;
+    }
   }
 
   &__capture {
@@ -50,6 +96,15 @@
     font-size: 2.7rem;
     line-height: 140%;
     color: #2d3241;
+
+    @include tablet {
+      font-size: 2.2rem;
+    }
+
+    @include small-tablet {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
 
     span {
       color: #3179df;
@@ -61,6 +116,7 @@
       margin-bottom: 5rem;
     }
   }
+
   &__item {
     padding-left: 6.3rem;
     position: relative;
@@ -68,6 +124,12 @@
     font-size: 2rem;
     line-height: 135%;
     color: #2d3241;
+
+    @include small-tablet {
+      font-size: 14px;
+      padding-left: 44px;
+    }
+
     span {
       font-weight: 700;
     }
@@ -87,10 +149,20 @@
       background-size: 1.3rem 0.9rem;
       background-position: center;
       background-repeat: no-repeat;
+
+      @include small-tablet {
+        width: 30px;
+        height: 30px;
+        background-size: 10px 6px;
+      }
     }
 
     &:not(:last-child) {
       margin-bottom: 2rem;
+
+      @include small-tablet {
+        margin-bottom: 14px;
+      }
     }
   }
 }

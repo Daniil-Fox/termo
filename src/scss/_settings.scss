@@ -145,6 +145,10 @@ a {
     font-size: 16px;
   }
 
+  @include small-tablet {
+    font-size: 16px;
+  }
+
   @include mobile {
     padding: 28px 50px 17px;
   }
@@ -180,7 +184,7 @@ a {
     letter-spacing: 0.03em;
     text-align: center;
     color: #2d3241;
-
+    text-transform: lowercase;
     padding: 0.4rem 1.4rem;
     border-radius: 0.5rem;
 
@@ -406,6 +410,7 @@ a {
   padding: 1.1rem 2.6rem;
   background-color: #fff;
   border-radius: 0.5rem;
+  cursor: pointer;
 
   @include tablet {
     padding: 1rem 2rem;
@@ -491,6 +496,14 @@ a {
   text-align: center;
   color: #2d3241;
 
+  @include tablet {
+    font-size: 2.2rem;
+  }
+
+  @include small-tablet {
+    font-size: 18px;
+  }
+
   span {
     color: #3179df;
   }
@@ -507,6 +520,14 @@ a {
   text-decoration-skip-ink: none;
   text-align: center;
   color: #3179df;
+
+  @include small-tablet {
+    font-size: 16px;
+  }
+
+  @include mobile {
+    font-size: 14px;
+  }
 }
 
 .text2 {
@@ -516,6 +537,11 @@ a {
   font-size: 2rem;
   line-height: 130%;
   color: #606778;
+
+  @include small-tablet {
+    font-size: 14px;
+  }
+
 }
 
 
@@ -565,6 +591,11 @@ a {
   background-color: #f1f5fa;
   padding: 9px;
   animation: rotate 30s linear infinite;
+
+  @include small-tablet {
+    width: 168px;
+    height: 168px;
+  }
 
   svg {
     width: 100%;

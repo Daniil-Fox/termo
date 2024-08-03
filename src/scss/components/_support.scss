@@ -1,6 +1,14 @@
 .support {
   margin-bottom: 12rem;
 
+  @include tablet {
+    margin-bottom: 8rem;
+  }
+
+  @include small-tablet {
+    margin-bottom: 65px;
+  }
+
   &__container {
     border: 3px solid #e3eaf1;
     border-radius: 5rem;
@@ -9,6 +17,12 @@
     display: flex;
     align-items: center;
     gap: 7rem;
+
+    @include small-tablet {
+      flex-direction: column;
+      border-radius: 30px;
+      gap: 0;
+    }
   }
 
   &__left {
@@ -19,20 +33,47 @@
     max-width: 53rem;
     background-color: #ecf3fb;
 
+    @include small-tablet {
+      max-width: 100%;
+      padding: 20px;
+      border-radius: 30px;
+    }
   }
 
   &__expert {
     margin-bottom: 3.5rem;
+
+    @include small-tablet {
+      margin-bottom: 25px;
+    }
   }
 
   &__title {
     margin-bottom: 1.7rem;
-    text-align: center;
+    margin-left: 1.5rem;
     font-weight: 700;
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 12px;
+      margin-left: 0;
+    }
+  }
+
+  &__tel {
+    margin-left: 1.5rem;
+
+    @include small-tablet {
+      margin: 0;
+    }
   }
 
   &__items {
     padding: 3rem;
+
+    @include small-tablet {
+      padding: 32px 15px;
+    }
   }
 
   &__item {
@@ -51,10 +92,20 @@
     width: 7.5rem;
     height: 7.5rem;
     flex-shrink: 0;
+
+    @include small-tablet {
+      width: 55px;
+      height: 55px;
+      gap: 21px;
+    }
   }
 
   &__capture {
     line-height: 135%;
     margin-bottom: 0.8rem;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
   }
 }

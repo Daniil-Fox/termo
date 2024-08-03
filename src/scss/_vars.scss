@@ -3,9 +3,7 @@
 :root {
   // base
   --font-family: "Gilroy", sans-serif;
-  --second-family: "Manrope", sans-serif;
-  --third-family: "Inter", sans-serif;
-  --font3: "Montserrat", sans-serif;
+
   --content-width: 117rem;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
@@ -13,9 +11,11 @@
   @media (max-width: 1024px) {
     --container-width: 100rem;
   }
+
   @media (max-width: 768px) {
     --container-width: 100%;
   }
+
   // colors
   --light-color: #fff;
   --red-color: #ce3c46;

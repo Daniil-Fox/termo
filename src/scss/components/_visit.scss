@@ -2,10 +2,19 @@
   position: relative;
   padding-top: 7.7rem;
 
+  @include small-tablet {
+    padding-top: 50px;
+  }
+
   &__wrapper {
     padding: 13rem 0;
     background-color: #202228;
     position: relative;
+
+    @include small-tablet {
+      padding-top: 65px;
+      padding-bottom: 65px;
+    }
   }
 
   &__container {
@@ -13,27 +22,60 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 45rem);
     gap: 4rem 2rem;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
   }
 
   &__title {
     margin-bottom: 3rem;
     text-align: left;
     color: #fff;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__block {
     &:not(:last-child) {
       margin-bottom: 2.8rem;
+
+      @include small-tablet {
+        margin-bottom: 24px;
+      }
     }
   }
 
   &__capture {
+    margin-bottom: 4px;
     font-weight: 700;
     color: #ce3c46;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
   }
 
   &__value {
     color: #fff;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__content {
+    @include tablet {
+      margin-bottom: 50px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__tel {
@@ -43,18 +85,52 @@
     line-height: 130%;
     color: #838ca0;
 
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+
     a {
       font-weight: 700;
       font-size: 2.4rem;
       line-height: 160%;
       color: #fff;
+
+      @include small-tablet {
+        font-size: 20px;
+      }
     }
   }
 
   &__info {
     position: relative;
 
+    @include tablet {
+      order: 5;
 
+      height: 550px;
+
+      &:not(:last-child) {
+        margin-bottom: 35px;
+      }
+    }
+
+    @include small-tablet {
+      height: 350px;
+    }
+
+    @include mobile {
+      height: 215px;
+    }
+  }
+
+  &__img {
+    img {
+      object-position: top;
+    }
   }
 
   &__img,
@@ -63,6 +139,10 @@
     height: 100%;
     border-radius: 5rem;
     overflow: hidden;
+
+    @include tablet {
+      border-radius: 30px;
+    }
 
     img {
       width: 100%;
@@ -86,17 +166,56 @@
     color: #2d3241;
     padding: 5px;
     background-image: linear-gradient(to bottom, #FFE18F, #FBCD5D, #F6C24C);
+    white-space: nowrap;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+    }
   }
 
   &__download {
+    @include small-tablet {
+      align-items: flex-start;
+    }
+
+    svg {
+      @include small-tablet {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
     a {
       font-size: 1.6rem;
+
+      @include small-tablet {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+      }
     }
   }
 
   &__write {
     margin-bottom: 6rem;
     max-width: 53rem;
+
+    @include small-tablet {
+      margin-bottom: 45px;
+      max-width: 60%;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
   }
 
   &__socials {
@@ -117,6 +236,12 @@
 
     padding: 1.6rem 1rem;
 
+    @include small-tablet {
+      width: 50px;
+      height: 50px;
+      padding: 17px 3px;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -126,6 +251,10 @@
 
   &__copy {
     margin-bottom: 4.5rem;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -138,5 +267,14 @@
     font-size: 2.2rem;
     line-height: 130%;
     color: #fff;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 34px;
+    }
   }
 }

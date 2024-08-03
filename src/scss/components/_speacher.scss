@@ -5,10 +5,27 @@
   display: flex;
   gap: 6.5rem;
 
+  @include small-tablet {
+    padding: 20px;
+    border-radius: 30px;
+    margin: -20px;
+    margin-top: 0;
+    gap: 20px;
+    flex-direction: column;
+  }
+
   &__about {
     flex-shrink: 0;
     max-width: 12rem;
+
+    @include small-tablet {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
   }
+
   &__img {
     margin-bottom: 1.6rem;
     width: 10rem;
@@ -16,6 +33,16 @@
     border: 3px solid #fff;
     position: relative;
     border-radius: 100%;
+
+    @include small-tablet {
+      width: 100px;
+      height: 100px;
+    }
+
+    @include mobile {
+      margin-bottom: 0;
+    }
+
     img {
       overflow: hidden;
       border-radius: 100%;
@@ -34,6 +61,13 @@
       border-radius: 100%;
       border: 3px solid #fff;
       background-color: #64d05d;
+
+      @include small-tablet {
+        width: 15px;
+        height: 15px;
+        bottom: 5px;
+        right: 5px;
+      }
     }
   }
 
@@ -45,20 +79,32 @@
     font-size: 1.6rem;
     line-height: 130%;
     color: #2d3241;
+
+    @include small-tablet {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
   }
 
   &__prof {
+    display: block;
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 156%;
     color: #606778;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
   }
+
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
     padding-top: 3rem;
+
     &::before {
       content: "";
       position: absolute;
@@ -70,8 +116,14 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+
+      @include small-tablet {
+        width: 25px;
+        height: 20px;
+      }
     }
   }
+
   &__desc {
     margin: 0;
     font-family: var(--font-family);
@@ -79,6 +131,10 @@
     font-size: 1.6rem;
     line-height: 135%;
     color: #2d3241;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
 
     span {
       font-weight: 700;
