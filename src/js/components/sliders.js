@@ -1,7 +1,10 @@
 import { Swiper } from "swiper";
 import { EffectFade, Navigation, Pagination, Thumbs } from "swiper/modules";
+import clearContentTypes from './types-content.js'
+
 
 Swiper.use([Navigation, Pagination, EffectFade, Thumbs])
+
 
 const typesThumbs = new Swiper(".types__slider", {
   slidesPerView: "auto",
@@ -30,7 +33,7 @@ new Swiper(".video-r__slider", {
 });
 
 
-new Swiper('.types-content-slider', {
+const typesContentSlider = new Swiper('.types-content-slider', {
   slidesPerView: 1,
   spaceBetween: 30,
   effect: 'fade',
@@ -43,7 +46,8 @@ new Swiper('.types-content-slider', {
   },
   on: {
     'slideChange': (swiper) => {
-      typesThumbs.activeIndex = swiper.activeIndex
+      typesThumbs.activeIndex = swiper.activeIndex;
+      clearContentTypes()
     }
   }
 })
@@ -94,3 +98,9 @@ window.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 15,
   });
 });
+
+
+
+
+
+

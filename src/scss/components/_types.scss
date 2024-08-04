@@ -211,6 +211,12 @@
     padding-top: 40px;
   }
 
+  &__wrapper {
+    @include small-tablet {
+      padding-bottom: 30px;
+    }
+  }
+
   &__content {
     @include small-tablet {
       box-sizing: content-box;
@@ -241,7 +247,9 @@
     }
 
     &.active {
-      transform: rotate(180deg);
+      svg {
+        transform: rotate(180deg);
+      }
     }
   }
 
@@ -360,6 +368,15 @@
     font-size: 1.6rem;
     line-height: 140%;
 
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+
     ol,
     ul {
       li {
@@ -373,13 +390,54 @@
     align-items: center;
     gap: 1rem;
 
+    @include small-tablet {
+      padding-left: 30px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 0;
+      align-items: flex-start;
+    }
+
     svg {
       width: 2rem;
       height: 2rem;
     }
 
     span {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       color: #3179df;
+      padding-left: calc(2rem + 10px);
+      position: relative;
+
+      @include small-tablet {
+        padding-left: 0px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        background-image: url('./../img/rubble.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include small-tablet {
+          right: calc(100% + 10px);
+          left: unset;
+          width: 20px;
+          height: 20px;
+        }
+      }
     }
   }
 }
