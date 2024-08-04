@@ -1,0 +1,122 @@
+.popup-data {
+  &__body {
+    max-width: 53rem;
+    background: #fff;
+
+    @include small-tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__top {
+    padding: 2.4rem 6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+
+    @include small-tablet {
+      padding: 15px;
+      padding-bottom: 20px;
+      gap: 15px;
+    }
+  }
+
+  &__img {
+    width: 9rem;
+    height: 9rem;
+    position: relative;
+    flex-shrink: 0;
+
+    @include small-tablet {
+      width: 70px;
+      height: 70px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      right: 0.5rem;
+      bottom: 0.5rem;
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 100%;
+      border: 3px solid #fff;
+      background-color: #64D05D;
+
+      @include small-tablet {
+        width: 18px;
+        height: 18px;
+        right: 5px;
+        bottom: 5px;
+      }
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 130%;
+    color: #2d3241;
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__prof {
+    display: block;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 156%;
+    color: #606778;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__content {
+    border-radius: 5rem;
+    background: linear-gradient(24deg, #ecf3fb 0%, #c2d4e9 100%);
+    padding: 5.4rem 6rem;
+    padding-bottom: 5rem;
+
+    @include small-tablet {
+      border-radius: 30px;
+      padding: 30px 15px;
+    }
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    margin-bottom: 0.7rem;
+
+    @include small-tablet {
+      font-size: 24px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 4.6rem;
+
+    @include small-tablet {
+      margin-bottom: 28px;
+    }
+  }
+}

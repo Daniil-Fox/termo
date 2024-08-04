@@ -111,8 +111,9 @@
         <li><span>Цены</span></li>
       </ul>
 
-      <form action="#" class="cta-form cta__form form">
+      <form action="#" class="cta-form cta__form form form-catalog">
         <div class="select">
+          <input type="hidden" value="Получить каталог с ценами">
           <select name="Способ связи" class="select__r visually-hidden">
             <option value="whatsapp" selected>Whatsapp</option>
             <option value="telegram">Telegram</option>
@@ -188,8 +189,10 @@
         </div>
 
         <label class="cta-form__label">
-          <input type="tel" class="cta-form__input input-tel" placeholder="Ваш телефон" />
+          <input type="tel" class="cta-form__input input-tel" name="Телефон" placeholder="Ваш телефон" />
+          <input type="hidden" class="cta-form__input input-email" name="Email" placeholder="Ваш Email" />
         </label>
+
 
         <button class="btn-reset btn btn--red cta-form__btn">
           Получить каталог с&nbsp;ценами

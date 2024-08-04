@@ -1,0 +1,235 @@
+.popup-form {
+  &__title {
+    margin: 0;
+    margin-bottom: 0.9rem;
+
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 130%;
+    color: #2d3241;
+
+    @include tablet {
+      font-size: 2.2rem;
+    }
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+  }
+
+
+  &__checks {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 2.5rem;
+
+    @include small-tablet {
+      gap: 7px;
+      margin-bottom: 27px;
+    }
+  }
+
+  &__attach {
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #3179df;
+    cursor: pointer;
+
+    @include small-tablet {
+      margin: 20px 0 0px;
+      font-size: 16px;
+      gap: 14px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 2.2rem;
+      height: 2.5rem;
+      background-image: url('./../img/attach.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include small-tablet {
+        width: 22px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__radio {
+    padding: 1.3rem 2.5rem;
+    border-radius: 3rem;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+    cursor: pointer;
+    flex: 1;
+
+    @include small-tablet {
+      flex: unset;
+      width: 145px;
+      padding: 9px 16px 3px;
+      border-radius: 20px;
+      gap: 0.8rem;
+    }
+
+    @include mobile {
+      width: unset;
+      flex: 1;
+    }
+
+    span {
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 156%;
+      text-align: center;
+      color: #2d3241;
+
+      @include small-tablet {
+        font-size: 14px;
+      }
+
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__icon {
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem;
+
+    @include small-tablet {
+      width: 30px;
+      height: 30px;
+      padding: 6px;
+    }
+
+    @include mobile {
+      width: 25px;
+      height: 25px;
+      padding: 5px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &--whatsapp {
+      background-color: #64D05D;
+    }
+
+    &--telegram {
+      background-color: #039BE5;
+    }
+
+    &--email {
+      background-color: #F47B0A;
+    }
+  }
+
+  &__label {
+    display: block;
+    width: 100%;
+
+
+    &:not(:last-child) {
+      margin-bottom: 1.4rem;
+
+      @include small-tablet {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 9rem;
+    padding: 2.5rem;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 130%;
+    color: #000;
+
+    @include small-tablet {
+      height: 70px;
+      padding: 20px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    &::placeholder {
+      color: #606778;
+    }
+
+  }
+
+  &__btn {
+    width: 100%;
+    height: 9rem;
+    padding: 1.4rem 0;
+
+    @include small-tablet {
+      margin-top: 20px;
+      padding: 15px;
+      height: 90px;
+    }
+  }
+
+  &__accept {
+    margin-top: 4.7rem;
+
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+    text-align: center;
+    color: #606778;
+
+    @include small-tablet {
+      margin-top: 40px;
+      font-size: 13px;
+    }
+
+    a {
+      color: #3179df;
+    }
+  }
+}

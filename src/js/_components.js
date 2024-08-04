@@ -5,3 +5,5 @@ import "./components/fancy.js";
 import "./components/mobile-drop.js";
 import "./components/modals.js";
 import "./components/modals-types.js";
+import "./components/popups.js";
+import "./components/validator.js";

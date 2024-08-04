@@ -612,3 +612,11 @@ a {
     transform: translate(-50%, 0%) rotate(360deg);
   }
 }
+
+.just-validate-error-label {
+  display: none;
+}
+
+.just-validate-error-field {
+  outline: 1px solid #ce3c46;
+}
