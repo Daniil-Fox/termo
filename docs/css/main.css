@@ -2694,10 +2694,12 @@ a {
 .cta__title {
   text-align: left;
   margin-bottom: 3rem;
+  max-width: 87rem;
 }
 @media (max-width: 768px) {
   .cta__title {
     margin-bottom: 20px;
+    max-width: 100%;
   }
 }
 .cta__title span {

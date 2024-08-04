@@ -10331,7 +10331,7 @@ const updateValidator = (f, val, type) => {
   val.destroy();
   val = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"](f);
   const telSelector = f.querySelector('.input-tel');
-  let sName = type == 'email' ? 'Email' : 'Телефон';
+  let sName = type == 'email' ? 'Телефон' : 'Email';
   if (type == "email") {
     val.addField('.input-email', [{
       rule: 'required'
@@ -10359,9 +10359,6 @@ const updateValidator = (f, val, type) => {
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          if (afterSend) {
-            afterSend();
-          }
           console.log('Отправлено');
         }
       }
@@ -10403,9 +10400,6 @@ ctaForms.forEach(f => {
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          if (afterSend) {
-            afterSend();
-          }
           console.log('Отправлено');
         }
       }

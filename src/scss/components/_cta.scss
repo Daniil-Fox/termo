@@ -65,9 +65,11 @@
   &__title {
     text-align: left;
     margin-bottom: 3rem;
+    max-width: 87rem;
 
     @include small-tablet {
       margin-bottom: 20px;
+      max-width: 100%;
     }
 
     span {
