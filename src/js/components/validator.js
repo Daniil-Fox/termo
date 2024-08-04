@@ -12,11 +12,10 @@ const ctaForms = document.querySelectorAll('.cta__form')
 const updateValidator = (f, val, type) => {
   val.destroy()
   val = new JustValidate(f)
-
+  const telSelector = f.querySelector('.input-tel')
   let sName = type == 'email' ? 'Email' : 'Телефон'
 
   if(type == "email"){
-
     val.addField('.input-email', [
       {
         rule: 'required',
@@ -24,16 +23,10 @@ const updateValidator = (f, val, type) => {
       {
         rule: 'email',
       },
-    ]).addField('.select__r', [
-      {
-        rule: 'required'
-      }
     ])
   }
 
   if(type == "tel") {
-
-
     val.addField('.input-tel', [
       {
         rule: 'required',
@@ -73,7 +66,7 @@ const updateValidator = (f, val, type) => {
 
     ev.target.reset();
   })
-
+  return val
 }
 
 
@@ -111,16 +104,7 @@ ctaForms.forEach(f => {
       }
     ])
   }
-  if(emailInput){
-    validator.addField(emailInput, [
-      {
-        rule: 'required'
-      },
-      {
-        rule: 'email'
-      }
-    ])
-  }
+
     validator.onSuccess((ev) => {
       let formData = new FormData(ev.target);
       formData.delete('Email')
@@ -166,7 +150,8 @@ ctaForms.forEach(f => {
 
           type = 'tel'
         }
-        updateValidator(f, validator, type)
+        validator = updateValidator(f, validator, type)
+        validator.refresh()
       })
     })
   }

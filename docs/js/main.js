@@ -10330,14 +10330,13 @@ const ctaForms = document.querySelectorAll('.cta__form');
 const updateValidator = (f, val, type) => {
   val.destroy();
   val = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"](f);
+  const telSelector = f.querySelector('.input-tel');
   let sName = type == 'email' ? 'Email' : 'Телефон';
   if (type == "email") {
     val.addField('.input-email', [{
       rule: 'required'
     }, {
       rule: 'email'
-    }]).addField('.select__r', [{
-      rule: 'required'
     }]);
   }
   if (type == "tel") {
@@ -10371,6 +10370,7 @@ const updateValidator = (f, val, type) => {
     xhr.send(formData);
     ev.target.reset();
   });
+  return val;
 };
 ctaForms.forEach(f => {
   let validator = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"](f);
@@ -10394,13 +10394,6 @@ ctaForms.forEach(f => {
   if (selectF) {
     validator.addField(selectF, [{
       rule: 'required'
-    }]);
-  }
-  if (emailInput) {
-    validator.addField(emailInput, [{
-      rule: 'required'
-    }, {
-      rule: 'email'
     }]);
   }
   validator.onSuccess(ev => {
@@ -10438,7 +10431,8 @@ ctaForms.forEach(f => {
           inputEmail.type = 'hidden';
           type = 'tel';
         }
-        updateValidator(f, validator, type);
+        validator = updateValidator(f, validator, type);
+        validator.refresh();
       });
     });
   }
