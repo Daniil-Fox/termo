@@ -25,15 +25,16 @@ menuBurger.addEventListener("click", (e) => {
 
 window.addEventListener('DOMContentLoaded', e => {
   const vidgets = document.querySelector('.vidgets')
-  const vidgetsBody = vidgets.querySelector('.vidgets__body')
-  setTimeout(() => {
-    vidgets.style.transform = 'translate(0, -50%)';
-  }, 1000)
-  setTimeout(() => {
-    vidgets.classList.remove('hide')
-    vidgetsBody.style.maxHeight = vidgetsBody.scrollHeight + 'px';
-  }, 1500)
+
   if(vidgets){
+    const vidgetsBody = vidgets.querySelector('.vidgets__body')
+    setTimeout(() => {
+      vidgets.style.transform = 'translate(0, -50%)';
+    }, 1000)
+    setTimeout(() => {
+      vidgets.classList.remove('hide')
+      vidgetsBody.style.maxHeight = vidgetsBody.scrollHeight + 'px';
+    }, 1500)
     const vidgetsClose = vidgets.querySelector('.vidgets__close')
 
     vidgetsClose.addEventListener('click', e => {
