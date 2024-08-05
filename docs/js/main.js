@@ -10509,7 +10509,7 @@ popupForms.forEach(pf => {
       rule: 'files',
       value: {
         files: {
-          types: ['image/png']
+          types: ['image/png', 'image/jpeg', 'image/jpg']
         }
       }
     }]);
