@@ -4231,14 +4231,14 @@
       <form action="#" class="popup__right popup-form">
         <input type="hidden" name="Тема_сообщения:" value="Фото шильдика">
         <label class="popup-form__label">
-          <input type="tel" class="popup-form__input input-tel" required name="Телефон клиента:"
-            placeholder="Ваш телефон*">
+          <input type="tel" class="popup-form__input input-tel" name="Телефон клиента:" placeholder="Ваш телефон*">
         </label>
         <label class="popup-form__label">
           <input type="email" class="popup-form__input input-email" name="Email:" placeholder="Ваша эл.почта">
         </label>
 
-        <input type="file" id="popup-attach" name="Файл:" class="visually-hidden input-file">
+        <input required type="file" id="popup-attach" name="Файл:" class="visually-hidden input-file"
+          accept=".jpg, .jpeg, .png">
         <label for="popup-attach" class="popup-form__attach">Прикрепить фото шильдика</label>
 
         <button class="btn-reset btn btn--red popup-form__btn">

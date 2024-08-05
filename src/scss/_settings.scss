@@ -620,3 +620,7 @@ a {
 .just-validate-error-field {
   outline: 1px solid #ce3c46;
 }
+
+.just-validate-error-field+.popup-form__attach {
+  color: #ce3c46 !important;
+}

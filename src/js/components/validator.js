@@ -53,7 +53,9 @@ const updateValidator = (f, val, type) => {
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          console.log('Отправлено');
+          setTimeout(() => {
+            location.href = 'thank-you.html'
+          }, 100)
         }
       }
     }
@@ -110,7 +112,9 @@ ctaForms.forEach(f => {
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
-            console.log('Отправлено');
+            setTimeout(() => {
+              location.href = 'thank-you.html'
+            }, 100)
           }
         }
       }
@@ -163,6 +167,7 @@ popupForms.forEach(pf => {
   const emailSelector = pf.querySelector('.input-email')
   const photoSelector = pf.querySelector('.input-file')
   const radioBoxes = pf.querySelector('.popup-form__checks')
+
   const inputMask = new Inputmask('+7 (999) 999-99-99');
   inputMask.mask(telSelector);
 
@@ -187,7 +192,6 @@ popupForms.forEach(pf => {
        }
      ])
   }
-
   if(photoSelector){
     validator.addField(photoSelector, [
       {
@@ -253,32 +257,41 @@ popupForms.forEach(pf => {
           telSelector.placeholder = "Ваш телефон*"
         }
 
-
-
       })
     })
 
 
-    validator.onSuccess((ev) => {
-      let formData = new FormData(ev.target);
-      formData.delete('Тема_сообщения:')
-      let xhr = new XMLHttpRequest();
+  }
+  validator.onSuccess((ev) => {
+    let formData = new FormData(ev.target);
+    let xhr = new XMLHttpRequest();
 
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            if (afterSend) {
-              afterSend();
-            }
-            console.log('Отправлено');
-          }
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          setTimeout(() => {
+            location.href = 'thank-you.html'
+          }, 100)
         }
       }
+    }
 
-      console.log(formData);
-      xhr.open('POST', 'mail.php', true);
-      xhr.send(formData);
-      ev.target.reset();
-    })
-  }
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+    ev.target.reset();
+  })
+})
+
+
+const fileInput = document.querySelectorAll('.input-file')
+
+fileInput.forEach(inp => {
+  const label = document.querySelector(`label[for="${inp.id}"]`)
+  inp.addEventListener('change', e => {
+    if(inp.value){
+      label.textContent = inp.files[0].name
+    } else {
+      label.textContent = 'ПРИКРЕПИТЬ ФОТО ШИЛЬДИКА'
+    }
+  })
 })

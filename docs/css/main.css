@@ -810,6 +810,10 @@ a {
   outline: 1px solid #ce3c46;
 }
 
+.just-validate-error-field + .popup-form__attach {
+  color: #ce3c46 !important;
+}
+
 .header {
   padding: 2rem 0;
   position: relative;
