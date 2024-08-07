@@ -9053,6 +9053,10 @@ a {
 .quiz-popup-form-sec .popup__image {
   left: 14rem;
 }
+.quiz-popup-form .popup__title span,
+.quiz-popup-form-sec .popup__title span {
+  display: block;
+}
 
 .popup-analog {
   overflow-y: auto;

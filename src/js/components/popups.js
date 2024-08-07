@@ -4,6 +4,7 @@ const popupShild = document.querySelector('.popup--shild')
 const popupRecall = document.querySelector('.popup--recall')
 const popupExc = document.querySelector('.popup--exc')
 const popupOptions = document.querySelector('.popup-quiz')
+const popupAnalog = document.querySelector('.popup-analog')
 
 
 const popupButtons = document.querySelectorAll('[data-popup]')
@@ -11,6 +12,7 @@ const popupButtons = document.querySelectorAll('[data-popup]')
 const popups = document.querySelectorAll('.popup')
 popupButtons.forEach(btn => {
   btn.addEventListener('click', e => {
+    e.preventDefault()
     const dataset = btn.dataset.popup
 
     if(dataset == "catalog"){
@@ -31,6 +33,9 @@ popupButtons.forEach(btn => {
     }
     if(dataset == "options"){
       popupOptions.classList.add('active')
+    }
+    if(dataset == "analog"){
+      popupAnalog.classList.add('active')
     }
 
   })
