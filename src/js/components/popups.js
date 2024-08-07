@@ -43,11 +43,26 @@ popups.forEach(pop => {
 
   let quizBody = null;
   let quizForm = null;
-  if(pop.classList.contains('.popup-quiz')){
+  if(pop.classList.contains('popup-quiz')){
     quizForm = pop.querySelector('.popup-quiz .quiz-popup-form')
     quizBody = pop.querySelector('.popup-quiz .popup-quiz__body')
   }
-  if(quizBody){
+
+
+  pop.addEventListener('click', e => {
+    pop.classList.remove('active')
+    if(quizBody){
+    setTimeout(() => {
+      quizBody.style.display = null
+      quizBody.style.opacity = null
+      quizForm.style.display = null
+      quizForm.style.opacity = null
+    }, 301)
+  }
+  })
+  popClose.addEventListener('click', e => {
+    pop.classList.remove('active')
+    if(quizBody){
     setTimeout(() => {
       quizBody.style.display = null
       quizForm.style.display = null
@@ -55,14 +70,6 @@ popups.forEach(pop => {
     }, 301)
   }
 
-  pop.addEventListener('click', e => {
-    pop.classList.remove('active')
-  })
-  popClose.addEventListener('click', e => {
-    pop.classList.remove('active')
-    if(e.currentTarget.classList.contains('.popup-quiz')){
-
-    }
   })
 
   popBody.forEach(pb => {
