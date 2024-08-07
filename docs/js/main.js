@@ -10637,6 +10637,9 @@ if (quiz) {
       value: 1
     }]);
   });
+  quizInputs.forEach(qinp => {
+    qinp.addEventListener('change', e => checkInputs());
+  });
   const checkInputs = () => {
     let isValide = true;
     for (let i = 0; i < quizInputs.length; i++) {
@@ -10644,6 +10647,9 @@ if (quiz) {
         isValide = false;
         break;
       }
+    }
+    if (isValide) {
+      quizBtn.classList.remove('quiz__btn--dis');
     }
     return isValide;
   };

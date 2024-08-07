@@ -4521,7 +4521,7 @@
     <div class="popup-quiz__content quiz">
       <div class="quiz__col">
         <div class="quiz__title">Греющая сторона</div>
-        <input type="hidden" value="Греющая сторона">
+        <input type="hidden" name="Греющая сторона">
         <label class="quiz__label">
           <span class="quiz__capture">Тип греющей среды</span>
           <div class="select quiz__select">
@@ -4671,7 +4671,7 @@
         <div class="quiz__row">
           <div class="quiz__input-wrapper"
             data-hint="Количество тепла, проходящее с первой на вторую сторону теплообменника. Указано в проектной документации">
-            <input type="number" class="quiz__input" placeholder="Мощность">
+            <input type="number" class="quiz__input" name="Мощность" placeholder="Мощность">
             <button class="quiz__hint btn-reset"><svg width="7" height="10" viewBox="0 0 7 10" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -4723,11 +4723,11 @@
       </div>
       <div class="quiz__col">
         <div class="quiz__title quiz__title--hot">Нагреваемая сторона</div>
-        <input type="hidden" value="Нагреваемая сторона">
+        <input type="hidden" name="Нагреваемая сторона">
         <label class="quiz__label">
           <span class="quiz__capture">Тип греющей среды</span>
           <div class="select quiz__select">
-            <select name="Тип греющей среды" class="select__r visually-hidden">
+            <select name="Тип нагреваемой стороны" class="select__r visually-hidden">
               <option value="Вода" selected>Вода</option>
               <option value="Пар">Пар</option>
               <option value="Этиленгликоль">Этиленгликоль</option>
@@ -4771,7 +4771,7 @@
 
           <div class="quiz__row">
             <div class="quiz__input-wrapper" data-hint="Пропускная способность">
-              <input type="number" min="0" name="Расход" class="quiz__input" placeholder="0">
+              <input type="number" min="0" name="Расход Нагреваемой стороны" class="quiz__input" placeholder="0">
               <button class="quiz__hint btn-reset"><svg width="7" height="10" viewBox="0 0 7 10" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -4822,7 +4822,8 @@
           <span class="quiz__capture">Температура на входе</span>
           <div class="quiz__input-wrapper"
             data-hint="Температура горячего контура на входе теплообменника. Данные могут быть в технических условиях или по договору с теплоснабжающей компанией.">
-            <input min="0" name="Температура на входе" type="number" class="quiz__input" placeholder="0">
+            <input min="0" name="Температура на входе нагреваемой стороны" type="number" class="quiz__input"
+              placeholder="0">
             <button class="quiz__hint btn-reset">
               <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -4843,7 +4844,8 @@
                   fill="#3179DF" />
               </svg>
             </button>
-            <input min="0" name="Температура на выходе" type="number" class="quiz__input" placeholder="0">
+            <input min="0" name="Температура на выходе нагреваемой стороны" type="number" class="quiz__input"
+              placeholder="0">
           </div>
         </label>
         <label class="quiz__label">
@@ -4857,7 +4859,7 @@
                   fill="#3179DF" />
               </svg>
             </button>
-            <input min="0" name="Потери давления" type="number" class="quiz__input" placeholder="0">
+            <input min="0" name="Потери давления нагреваемой стороны" type="number" class="quiz__input" placeholder="0">
           </div>
         </label>
       </div>
