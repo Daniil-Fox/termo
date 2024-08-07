@@ -1,0 +1,142 @@
+<form action="#" class="popup popup-analog">
+  <div class="popup-analog__body popup__body">
+    <div class="popup__close">
+      <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.000488281" y="34.0278" width="48.1213" height="1.37489" transform="rotate(-45 0.000488281 34.0278)"
+          fill="white" />
+        <rect x="0.972168" width="48.1213" height="1.37489" transform="rotate(45 0.972168 0)" fill="white" />
+      </svg>
+    </div>
+    <h4 class="popup__title popup-analog__title">Подбор аналога по 2 параметрам</h4>
+    <div class="popup-analog__container">
+      <div class="popup-analog__text text2">Укажите марку изготовителя теплообменного аппарата, который нужно заменить
+      </div>
+      <div class="popup-analog__right">
+        <div class="popup-analog__choice choice">
+
+          <label class="choice__item choice-item">
+            <input checked type="radio" name="Марка:" value="Alfa Laval" class="visually-hidden choice-item__radio">
+            <div class="choice-item__img">
+              <img src="./img/choice/alfa-laval.png" alt="">
+            </div>
+            <div class="choice-item__row">
+              <div class="choice-item__box"></div>
+              <div class="choice-item__capture">Alfa Laval</div>
+            </div>
+          </label>
+
+          <label class="choice__item choice-item">
+            <input type="radio" name="Марка:" value="Danfiss" class="visually-hidden choice-item__radio">
+            <div class="choice-item__img">
+              <img src="./img/choice/danfiss.png" alt="">
+            </div>
+            <div class="choice-item__row">
+              <div class="choice-item__box"></div>
+              <div class="choice-item__capture">Danfiss</div>
+            </div>
+          </label>
+
+          <label class="choice__item choice-item">
+            <input type="radio" name="Марка:" value="Secespol" class="visually-hidden choice-item__radio">
+            <div class="choice-item__img">
+              <img src="./img/choice/secespol.png" alt="">
+            </div>
+            <div class="choice-item__row">
+              <div class="choice-item__box"></div>
+              <div class="choice-item__capture">Secespol</div>
+            </div>
+          </label>
+
+          <label class="choice__item choice-item">
+            <input type="radio" name="Марка:" value="Swep" class="visually-hidden choice-item__radio">
+            <div class="choice-item__img">
+              <img src="./img/choice/swep.png" alt="">
+            </div>
+            <div class="choice-item__row">
+              <div class="choice-item__box"></div>
+              <div class="choice-item__capture">Swep</div>
+            </div>
+          </label>
+
+          <label class="choice__item choice-item">
+            <input type="radio" name="Марка:" value="Kaori" class="visually-hidden choice-item__radio">
+            <div class="choice-item__img">
+              <img src="./img/choice/kaori.png" alt="">
+            </div>
+            <div class="choice-item__row">
+              <div class="choice-item__box"></div>
+              <div class="choice-item__capture">Kaori</div>
+            </div>
+          </label>
+
+          <label class="choice__item choice-item">
+            <input type="radio" name="Марка:" value="Funke" class="visually-hidden choice-item__radio">
+            <div class="choice-item__img">
+              <img src="./img/choice/funke.png" alt="">
+            </div>
+            <div class="choice-item__row">
+              <div class="choice-item__box"></div>
+              <div class="choice-item__capture">Funke</div>
+            </div>
+          </label>
+
+          <label class="choice__item choice-item">
+            <input type="radio" name="Марка:" value="Kelvion" class="visually-hidden choice-item__radio">
+            <div class="choice-item__img">
+              <img src="./img/choice/kelvion.png" alt="">
+            </div>
+            <div class="choice-item__row">
+              <div class="choice-item__box"></div>
+              <div class="choice-item__capture">Kelvion</div>
+            </div>
+          </label>
+
+          <label class="choice__item choice-item">
+            <input type="radio" name="Марка:" value="Sondex" class="visually-hidden choice-item__radio">
+            <div class="choice-item__img">
+              <img src="./img/choice/sondex.png" alt="">
+            </div>
+            <div class="choice-item__row">
+              <div class="choice-item__box"></div>
+              <div class="choice-item__capture">Sondex</div>
+            </div>
+          </label>
+
+          <label class="choice__item choice-item">
+            <input type="radio" name="Марка:" value="Ридан" class="visually-hidden choice-item__radio">
+            <div class="choice-item__img">
+              <img src="./img/choice/ridan.png" alt="">
+            </div>
+            <div class="choice-item__row">
+              <div class="choice-item__box"></div>
+              <div class="choice-item__capture">Ридан</div>
+            </div>
+          </label>
+
+          <label class="choice__item choice-item">
+            <input type="radio" name="Марка:" value="Другой" class="visually-hidden choice-item__radio">
+            <div class="choice-item__img">
+              <img src="./img/choice/other.svg" alt="">
+            </div>
+            <div class="choice-item__row">
+              <div class="choice-item__box"></div>
+              <div class="choice-item__capture">Другой</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+
+
+      <div class="popup-analog__text text2">Если знаете, напишите конкретную серию и номер этого аппарата</div>
+
+      <div class="popup-analog__right">
+        <input type="text" name="Модель, серия и номер" placeholder="Модель" class="popup-analog__input">
+      </div>
+    </div>
+
+    <div class="btn btn-reset btn--red popup-analog__btn">Подобрать аналог</div>
+  </div>
+
+  @include('quiz-popup-form-sec.html')
+</form>

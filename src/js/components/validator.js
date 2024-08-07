@@ -301,17 +301,18 @@ fileInput.forEach(inp => {
 const quiz = document.querySelector('.quiz')
 
 const quizBtn = quiz.querySelector('.quiz__btn')
-
-const quizForm = document.querySelector('.popup-quiz .quiz-popup-form')
-
-const quizBody = document.querySelector('.popup-quiz .popup-quiz__body')
-
-const telSelector = quizForm.querySelector('.input-tel')
-const emailSelector = quizForm.querySelector('.input-email')
-const photoSelector = quizForm.querySelector('.input-file')
-const radioBoxes = quizForm.querySelector('.popup-form__checks')
+const popupQuiz = document.querySelector('.popup-quiz')
 
 if(quiz){
+  const quizForm = popupQuiz.querySelector('.quiz-popup-form')
+
+  const quizBody = popupQuiz.querySelector('.popup-quiz__body')
+
+  const telSelector = quizForm.querySelector('.input-tel')
+  const emailSelector = quizForm.querySelector('.input-email')
+  const photoSelector = quizForm.querySelector('.input-file')
+  const radioBoxes = quizForm.querySelector('.popup-form__checks')
+
   const validator = new JustValidate('.quiz-form')
 
   const quizInputs = quiz.querySelectorAll('.quiz__input[type="number"]')
@@ -391,26 +392,6 @@ if(quiz){
        }
      ])
   }
-  if(photoSelector){
-    validator.addField(photoSelector, [
-      {
-        rule: 'minFilesCount',
-        value: 1,
-      },
-      {
-        rule: 'maxFilesCount',
-        value: 1,
-      },
-      {
-        rule: 'files',
-        value: {
-          files: {
-            types: ['image/png', 'image/jpeg', 'image/jpg'],
-          },
-        },
-      },
-    ])
-  }
 
   if(radioBoxes){
     const radioInp = radioBoxes.querySelectorAll('input[type="radio"]')
@@ -484,7 +465,127 @@ if(quiz){
 
 
 
+const analog = document.querySelector('.popup-analog')
 
+if(analog){
+  const validator = new JustValidate(analog)
+
+  const analogForm = analog.querySelector('.quiz-popup-form-sec')
+
+  const analogBody = analog.querySelector('.popup-analog__body')
+  const analogBtn = analog.querySelector('.popup-analog__btn')
+
+  const telSelector = analogForm.querySelector('.input-tel')
+  const emailSelector = analogForm.querySelector('.input-email')
+  const radioBoxes = analogForm.querySelector('.popup-form__checks')
+
+
+
+  analogBtn.addEventListener('click', e => {
+    analogBody.style.opacity = 0
+    setTimeout(() => {
+      analogBody.style.display = 'none'
+      analogForm.style.display = 'block'
+      analogForm.style.opacity = 1
+    }, 300)
+  })
+
+
+
+
+  const inputMask = new Inputmask('+7 (999) 999-99-99');
+  inputMask.mask(telSelector);
+
+  if(telSelector){
+    validator.addField(telSelector, [
+      {
+        rule: 'required'
+      },
+      {
+        rule: 'function',
+        validator: function() {
+          const phone = telSelector.inputmask.unmaskedvalue();
+          return phone.length === 10;
+        },
+      }
+    ])
+  }
+  if(emailSelector){
+    validator.addField(emailSelector, [
+       {
+         rule: 'email',
+       }
+     ])
+  }
+
+  if(radioBoxes){
+    const radioInp = radioBoxes.querySelectorAll('input[type="radio"]')
+
+    radioInp.forEach(el => {
+      el.addEventListener('change', e => {
+        validator.removeField(telSelector)
+        validator.removeField(emailSelector)
+
+        if(e.currentTarget.value == "Email"){
+
+          validator.addField(emailSelector, [
+            {
+              rule: 'required'
+            },
+            {
+              rule: 'email',
+            }
+          ])
+          emailSelector.placeholder = "Ваша эл.почта*"
+          telSelector.placeholder = "Ваш телефон"
+        } else {
+          validator.addField(telSelector, [
+            {
+              rule: 'required'
+            },
+            {
+              rule: 'function',
+              validator: function() {
+                const phone = telSelector.inputmask.unmaskedvalue();
+                return phone.length === 10;
+              },
+            }
+          ])
+          validator.addField(emailSelector, [
+            {
+              rule: 'email',
+            }
+          ])
+
+
+          emailSelector.placeholder = "Ваша эл.почта"
+          telSelector.placeholder = "Ваш телефон*"
+        }
+
+      })
+    })
+
+
+  }
+  validator.onSuccess((ev) => {
+    let formData = new FormData(ev.target);
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          setTimeout(() => {
+            location.href = 'thank-you.html'
+          }, 100)
+        }
+      }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+    ev.target.reset();
+  })
+}
 
 
 
