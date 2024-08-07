@@ -250,6 +250,8 @@
   }
 
   &__list {
+    position: relative;
+    z-index: 4;
     margin-top: 6rem;
     max-width: 20rem;
 

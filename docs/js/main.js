@@ -10034,8 +10034,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_popups_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/popups.js */ "./src/js/components/popups.js");
 /* harmony import */ var _components_validator_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/validator.js */ "./src/js/components/validator.js");
 /* harmony import */ var _components_types_content_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/types-content.js */ "./src/js/components/types-content.js");
+/* harmony import */ var _components_popup_hint_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/popup-hint.js */ "./src/js/components/popup-hint.js");
 
 // import "./components/tabs.js";
+
 
 
 
@@ -10144,6 +10146,29 @@ modals.forEach(modal => {
 
 /***/ }),
 
+/***/ "./src/js/components/popup-hint.js":
+/*!*****************************************!*\
+  !*** ./src/js/components/popup-hint.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const popupQuizWrapper = document.querySelectorAll('.quiz__input-wrapper');
+if (popupQuizWrapper.length > 0) {
+  popupQuizWrapper.forEach(wrap => {
+    const hintButton = wrap.querySelector('.quiz__hint');
+    hintButton.addEventListener('mouseenter', e => {
+      wrap.classList.add('active');
+    });
+    hintButton.addEventListener('mouseleave', e => {
+      wrap.classList.remove('active');
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/components/popups.js":
 /*!*************************************!*\
   !*** ./src/js/components/popups.js ***!
@@ -10157,6 +10182,7 @@ const popupCatalog = document.querySelector('.popup--catalog');
 const popupShild = document.querySelector('.popup--shild');
 const popupRecall = document.querySelector('.popup--recall');
 const popupExc = document.querySelector('.popup--exc');
+const popupOptions = document.querySelector('.popup-quiz');
 const popupButtons = document.querySelectorAll('[data-popup]');
 const popups = document.querySelectorAll('.popup');
 popupButtons.forEach(btn => {
@@ -10177,18 +10203,37 @@ popupButtons.forEach(btn => {
     if (dataset == "exc") {
       popupExc.classList.add('active');
     }
+    if (dataset == "options") {
+      popupOptions.classList.add('active');
+    }
   });
 });
 popups.forEach(pop => {
-  const popBody = pop.querySelector('.popup__body');
+  const popBody = pop.querySelectorAll('.popup__body');
   const popClose = pop.querySelector('.popup__close');
+  let quizBody = null;
+  let quizForm = null;
+  if (pop.classList.contains('.popup-quiz')) {
+    quizForm = pop.querySelector('.popup-quiz .quiz-popup-form');
+    quizBody = pop.querySelector('.popup-quiz .popup-quiz__body');
+  }
+  if (quizBody) {
+    setTimeout(() => {
+      quizBody.style.display = null;
+      quizForm.style.display = null;
+      quizForm.style.opacity = null;
+    }, 301);
+  }
   pop.addEventListener('click', e => {
     pop.classList.remove('active');
   });
   popClose.addEventListener('click', e => {
     pop.classList.remove('active');
+    if (e.currentTarget.classList.contains('.popup-quiz')) {}
   });
-  popBody.addEventListener('click', e => e.stopPropagation());
+  popBody.forEach(pb => {
+    pb.addEventListener('click', e => e.stopPropagation());
+  });
 });
 
 /***/ }),
@@ -10575,6 +10620,134 @@ fileInput.forEach(inp => {
     }
   });
 });
+const quiz = document.querySelector('.quiz');
+const quizBtn = quiz.querySelector('.quiz__btn');
+const quizForm = document.querySelector('.popup-quiz .quiz-popup-form');
+const quizBody = document.querySelector('.popup-quiz .popup-quiz__body');
+const telSelector = quizForm.querySelector('.input-tel');
+const emailSelector = quizForm.querySelector('.input-email');
+const photoSelector = quizForm.querySelector('.input-file');
+const radioBoxes = quizForm.querySelector('.popup-form__checks');
+if (quiz) {
+  const validator = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"]('.quiz-form');
+  const quizInputs = quiz.querySelectorAll('.quiz__input[type="number"]');
+  quizInputs.forEach(el => {
+    validator.addField(el, [{
+      rule: 'minNumber',
+      value: 1
+    }]);
+  });
+  const checkInputs = () => {
+    let isValide = true;
+    for (let i = 0; i < quizInputs.length; i++) {
+      if (quizInputs[i].value == "" || +quizInputs[i].value < 0) {
+        isValide = false;
+        break;
+      }
+    }
+    return isValide;
+  };
+  quizBtn.addEventListener('click', e => {
+    e.preventDefault();
+    validator.revalidate();
+    if (checkInputs()) {
+      quizInputs.forEach(qinp => qinp.classList.remove('just-validate-error-field'));
+      quizBody.style.opacity = '0';
+      setTimeout(() => {
+        quizBody.style.display = 'none';
+        quizForm.style.display = 'block';
+      }, 300);
+      setTimeout(() => {
+        quizForm.style.opacity = 1;
+      }, 301);
+    } else {
+      quizInputs.forEach(qinp => qinp.classList.add('just-validate-error-field'));
+    }
+  });
+  const inputMask = new _node_modules_inputmask_dist_inputmask_es6_js__WEBPACK_IMPORTED_MODULE_1__["default"]('+7 (999) 999-99-99');
+  inputMask.mask(telSelector);
+  if (telSelector) {
+    validator.addField(telSelector, [{
+      rule: 'required'
+    }, {
+      rule: 'function',
+      validator: function () {
+        const phone = telSelector.inputmask.unmaskedvalue();
+        return phone.length === 10;
+      }
+    }]);
+  }
+  if (emailSelector) {
+    validator.addField(emailSelector, [{
+      rule: 'email'
+    }]);
+  }
+  if (photoSelector) {
+    validator.addField(photoSelector, [{
+      rule: 'minFilesCount',
+      value: 1
+    }, {
+      rule: 'maxFilesCount',
+      value: 1
+    }, {
+      rule: 'files',
+      value: {
+        files: {
+          types: ['image/png', 'image/jpeg', 'image/jpg']
+        }
+      }
+    }]);
+  }
+  if (radioBoxes) {
+    const radioInp = radioBoxes.querySelectorAll('input[type="radio"]');
+    radioInp.forEach(el => {
+      el.addEventListener('change', e => {
+        validator.removeField(telSelector);
+        validator.removeField(emailSelector);
+        if (e.currentTarget.value == "Email") {
+          validator.addField(emailSelector, [{
+            rule: 'required'
+          }, {
+            rule: 'email'
+          }]);
+          emailSelector.placeholder = "Ваша эл.почта*";
+          telSelector.placeholder = "Ваш телефон";
+        } else {
+          validator.addField(telSelector, [{
+            rule: 'required'
+          }, {
+            rule: 'function',
+            validator: function () {
+              const phone = telSelector.inputmask.unmaskedvalue();
+              return phone.length === 10;
+            }
+          }]);
+          validator.addField(emailSelector, [{
+            rule: 'email'
+          }]);
+          emailSelector.placeholder = "Ваша эл.почта";
+          telSelector.placeholder = "Ваш телефон*";
+        }
+      });
+    });
+  }
+  validator.onSuccess(ev => {
+    let formData = new FormData(ev.target);
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          setTimeout(() => {
+            location.href = 'thank-you.html';
+          }, 100);
+        }
+      }
+    };
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+    ev.target.reset();
+  });
+}
 
 /***/ }),
 

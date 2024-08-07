@@ -8,3 +8,4 @@ import "./components/modals-types.js";
 import "./components/popups.js";
 import "./components/validator.js";
 import "./components/types-content.js";
+import "./components/popup-hint.js";

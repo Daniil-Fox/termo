@@ -3,6 +3,7 @@ const popupCatalog = document.querySelector('.popup--catalog')
 const popupShild = document.querySelector('.popup--shild')
 const popupRecall = document.querySelector('.popup--recall')
 const popupExc = document.querySelector('.popup--exc')
+const popupOptions = document.querySelector('.popup-quiz')
 
 
 const popupButtons = document.querySelectorAll('[data-popup]')
@@ -28,19 +29,43 @@ popupButtons.forEach(btn => {
     if(dataset == "exc"){
       popupExc.classList.add('active')
     }
+    if(dataset == "options"){
+      popupOptions.classList.add('active')
+    }
+
   })
 })
 
 
 popups.forEach(pop => {
-  const popBody = pop.querySelector('.popup__body')
+  const popBody = pop.querySelectorAll('.popup__body')
   const popClose = pop.querySelector('.popup__close')
+
+  let quizBody = null;
+  let quizForm = null;
+  if(pop.classList.contains('.popup-quiz')){
+    quizForm = pop.querySelector('.popup-quiz .quiz-popup-form')
+    quizBody = pop.querySelector('.popup-quiz .popup-quiz__body')
+  }
+  if(quizBody){
+    setTimeout(() => {
+      quizBody.style.display = null
+      quizForm.style.display = null
+      quizForm.style.opacity = null
+    }, 301)
+  }
+
   pop.addEventListener('click', e => {
     pop.classList.remove('active')
   })
   popClose.addEventListener('click', e => {
     pop.classList.remove('active')
+    if(e.currentTarget.classList.contains('.popup-quiz')){
+
+    }
   })
 
-  popBody.addEventListener('click', e => e.stopPropagation())
-})
+  popBody.forEach(pb => {
+      pb.addEventListener('click', e => e.stopPropagation())
+    })
+  })
