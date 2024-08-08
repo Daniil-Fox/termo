@@ -14,6 +14,12 @@
 
   transition: opacity .3s ease-out, z-index .3s ease-out;
 
+  @include small-tablet {
+    padding-top: 45px;
+    overflow-y: auto;
+    align-items: flex-start;
+  }
+
   &.active {
     opacity: 1;
     z-index: 120;
@@ -199,7 +205,7 @@
 
   &__expert {
     flex: 1;
-    max-width: 31.4rem;
+    max-width: 34.4rem;
 
     @include small-tablet {
       max-width: 100%;
@@ -208,7 +214,7 @@
 
   &__tel {
     flex: 1;
-    max-width: 34.2rem;
+    max-width: 36.2rem;
 
     @include small-tablet {
       max-width: 100%;
@@ -225,6 +231,10 @@
     font-size: 1.8rem;
     line-height: 140%;
     color: #606778;
+
+    @include tablet {
+      font-size: 16px;
+    }
 
     @include small-tablet {
       max-width: 100%;
@@ -403,6 +413,10 @@
   align-items: center;
   gap: 2rem;
 
+  @include tablet {
+    gap: 1.2rem;
+  }
+
   @include small-tablet {
     gap: 0;
     padding-left: 85px;
@@ -418,6 +432,12 @@
     border-radius: 100%;
     background-color: #ecf3fb;
     padding: 2.5rem;
+
+    @include tablet {
+      width: 5rem;
+      height: 5rem;
+      padding: 1rem;
+    }
 
     @include small-tablet {
       display: none;
@@ -436,6 +456,10 @@
     line-height: 160%;
     color: #2d3241;
 
+    @include tablet {
+      font-size: 22px;
+    }
+
     @include small-tablet {
       font-size: 20px;
     }
@@ -448,6 +472,10 @@
     font-size: 1.8rem;
     line-height: 130%;
     color: #606778;
+
+    @include tablet {
+      font-size: 16px;
+    }
 
     @include small-tablet {
       font-size: 14px;

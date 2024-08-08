@@ -1,61 +1,115 @@
 <div class="popup popup--shild">
   <div class="popup__body">
     <div class="popup__close">
-      <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0.000488281" y="34.0278" width="48.1213" height="1.37489" transform="rotate(-45 0.000488281 34.0278)"
-          fill="white" />
-        <rect x="0.972168" width="48.1213" height="1.37489" transform="rotate(45 0.972168 0)" fill="white" />
+      <svg
+        width="35"
+        height="35"
+        viewBox="0 0 35 35"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="0.000488281"
+          y="34.0278"
+          width="48.1213"
+          height="1.37489"
+          transform="rotate(-45 0.000488281 34.0278)"
+          fill="white"
+        />
+        <rect
+          x="0.972168"
+          width="48.1213"
+          height="1.37489"
+          transform="rotate(45 0.972168 0)"
+          fill="white"
+        />
       </svg>
     </div>
     <div class="popup__content">
       <div class="popup__left">
         <div class="popup__header">
           <h4 class="popup__title">Загрузите фото шильдика</h4>
-          <p class="popup__desc">и мы расчитаем цену аналога и свяжемся с вами через 15 минут</p>
+          <p class="popup__desc">
+            и мы расчитаем цену аналога и свяжемся с вами через 15 минут
+          </p>
         </div>
 
         <div class="popup__image">
           <picture>
-            <source srcset="./img/popup/phone-2x.webp" type="image/webp" media="(min-width: 1920px)">
-            <source srcset="./img/popup/phone.webp" type="image/webp">
-            <img src="./img/popup/phone.png" srcset="./img/popup/phone-2x.png 2x" alt="">
+            <source
+              srcset="./img/popup/phone-2x.webp"
+              type="image/webp"
+              media="(min-width: 1920px)"
+            />
+            <source srcset="./img/popup/phone.webp" type="image/webp" />
+            <img
+              src="./img/popup/phone.png"
+              srcset="./img/popup/phone-2x.png 2x"
+              alt=""
+            />
           </picture>
         </div>
       </div>
 
       <form action="#" class="popup__right popup-form">
-        <input type="hidden" name="Тема_сообщения:" value="Фото шильдика">
+        <input type="hidden" name="Тема_сообщения:" value="Фото шильдика" />
         <label class="popup-form__label">
-          <input type="tel" class="popup-form__input input-tel" name="Телефон клиента:" placeholder="Ваш телефон*">
+          <input
+            type="tel"
+            class="popup-form__input input-tel"
+            name="Телефон клиента:"
+            placeholder="Ваш телефон*"
+          />
         </label>
         <label class="popup-form__label">
-          <input type="email" class="popup-form__input input-email" name="Email:" placeholder="Ваша эл.почта">
+          <input
+            type="email"
+            class="popup-form__input input-email"
+            name="Email:"
+            placeholder="Ваша эл.почта"
+          />
         </label>
 
-        <input type="file" id="popup-attach" name="file[]" multiple class="visually-hidden input-file"
-          accept=".jpg, .jpeg, .png">
-        <label for="popup-attach" class="popup-form__attach">Прикрепить фото шильдика</label>
+        <input
+          type="file"
+          id="popup-attach"
+          name="file[]"
+          multiple
+          class="visually-hidden input-file"
+          accept=".jpg, .jpeg, .png"
+        />
+        <label for="popup-attach" class="popup-form__attach"
+          >Прикрепить фото шильдика</label
+        >
 
         <button class="btn-reset btn btn--red popup-form__btn">
-          Получить подбор<br>аналога
+          Получить подбор<br />аналога
 
           <span>с выгодой до 30%</span>
         </button>
 
         <div class="popup-form__accept">
-          Нажимая кнопку, вы соглашаетесь с условиями <a href="#">Пользовательского соглашения</a>
+          Нажимая кнопку, вы соглашаетесь с условиями
+          <a
+            href="https://teploobmennik-russia.ru/content/politika-konfidencialnosti"
+            target="_blank"
+            >Пользовательского соглашения</a
+          >
         </div>
       </form>
     </div>
-
 
     <div class="popup__bottom">
       <div class="popup__expert popup-expert">
         <div class="popup-expert__img">
           <picture>
-            <source srcset="./img/taras-2x.webp" type="image/webp" media="(min-width: 1920px)">
-            <source srcset="./img/taras.webp" type="image/webp">
-            <img src="./img/taras.png" srcset="./img/taras-2x.png" alt="">
+            <source
+              srcset="./img/taras-2x.webp"
+              type="image/webp"
+              media="(min-width: 1920px)"
+            />
+            <source srcset="./img/taras.webp" type="image/webp" />
+            <img src="./img/taras.png" srcset="./img/taras-2x.png" alt="" />
           </picture>
         </div>
         <div class="popup-expert__info">
@@ -70,14 +124,23 @@
 
       <div class="popup__tel popup-tel">
         <div class="popup-tel__icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               d="M8.29156 11.7099C6.38059 9.79896 5.94911 7.88802 5.85177 7.1224C5.82457 6.91071 5.89742 6.69841 6.04887 6.54801L7.59531 5.00228C7.82279 4.77494 7.86316 4.42063 7.69265 4.14795L5.23043 0.32468C5.04179 0.0227292 4.65446 -0.0862479 4.33604 0.0730403L0.383295 1.93462C0.125805 2.06141 -0.0256469 2.33499 0.00358823 2.6205C0.210701 4.58806 1.06849 9.42478 5.82173 14.1783C10.575 18.9319 15.4111 19.7893 17.3797 19.9964C17.6652 20.0256 17.9388 19.8742 18.0656 19.6167L19.9272 15.664C20.0859 15.3463 19.9776 14.96 19.6769 14.771L15.8536 12.3095C15.5811 12.1388 15.2268 12.1789 14.9993 12.4061L13.4535 13.9526C13.3031 14.104 13.0908 14.1769 12.8791 14.1497C12.1135 14.0523 10.2025 13.6209 8.29156 11.7099Z"
-              fill="#CE3C46" />
+              fill="#CE3C46"
+            />
           </svg>
         </div>
         <div class="popup-tel__info">
-          <a href="tel:+78003010265" class="popup-tel__value">8 800 301-02-65</a>
+          <a href="tel:+78003010265" class="popup-tel__value"
+            >8 800 301-02-65</a
+          >
           <span class="popup-tel__capture">На связи с 09:00 до 20:00 мск</span>
         </div>
       </div>
