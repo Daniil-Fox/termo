@@ -4586,7 +4586,8 @@ a {
     height: 25px;
   }
 }
-.econom__title span {
+.econom__title span,
+.econom__title a {
   color: #3179df !important;
 }
 @media (max-width: 1024px) {
