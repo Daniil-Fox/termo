@@ -21456,6 +21456,17 @@ window.addEventListener('DOMContentLoaded', e => {
     });
   }
 });
+const tempMore = document.querySelector('.temp-more');
+if (tempMore) {
+  const hiddenItems = document.querySelectorAll('.temp__product.is-hide');
+  tempMore.addEventListener('click', e => {
+    e.preventDefault();
+    hiddenItems.forEach(el => {
+      el.classList.remove('is-hide');
+    });
+    tempMore.remove();
+  });
+}
 })();
 
 /******/ })()

@@ -72,6 +72,25 @@
     }
   }
 
+  &__bottom {
+    margin-top: 30px;
+    display: none;
+    cursor: pointer;
+    text-align: center;
+
+    @include mobile {
+      display: block;
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      color: #3179df;
+    }
+  }
+
   &__capture {
     display: block;
     margin-bottom: 1.8rem;
@@ -181,8 +200,8 @@
     border-radius: 3rem;
   }
 
-  @include mobile {
-    &:not(:nth-child(1)) {
+  &.is-hide {
+    @include mobile {
       display: none !important;
     }
   }

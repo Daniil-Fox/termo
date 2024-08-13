@@ -82,6 +82,10 @@
     line-height: 130%;
     color: #3179df;
 
+    span {
+      color: #3179df !important;
+    }
+
     @include tablet {
       gap: 1.2rem;
       margin-bottom: 3rem;
